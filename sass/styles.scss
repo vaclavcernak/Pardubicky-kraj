@@ -1,0 +1,432 @@
+// Custom variables (override)
+@import "customVariables";
+
+// Bootstrap and its default variables
+@import "bootstrap";
+
+/*** Custom CSS ***/
+
+// Variables
+
+$blue-primary: #006bb6;
+$blue-secondary: #bfdaec;
+$black: #1d1d1b;
+$gray: #f2f2f2;
+$white: #ffffff;
+
+// Custom mixins
+
+@mixin wider-gutter {
+
+	.container {
+	    padding-right: 15px;
+	    padding-left: 15px;
+	}
+
+	.row {
+		 margin-right: -15px;
+	    margin-left: -15px;
+	}
+
+	div[class^="col"] {
+		padding-left:15px; 
+		padding-right:15px;
+	}
+
+}
+
+@mixin ellips {
+	overflow: hidden;
+   white-space: nowrap;
+  	text-overflow: ellipsis;
+}
+
+// Normalize
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+// Type
+
+h1, .h1 {
+	font-size: 1.7rem;
+}
+
+h2, .h2 {
+	font-size: 1.3rem;
+}
+
+h3, .h3 {
+	font-size: 1.1rem;
+}
+
+// Mobile-first styling
+
+// Misc 
+
+.block {
+	float: left;
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+//
+
+.city {
+	float: left;
+}
+
+// Middle HP 
+
+.bg-container {
+	background: $gray;
+	padding-top: 2em;
+	margin-bottom: 2em;
+}
+
+.middle-heading-dark {
+	background: $blue-primary;
+	padding: 10px 12px;
+
+	h3 {
+		margin: 0;
+		color: $white;
+		font-size: 1rem;
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+.middle-heading-light {
+	background: $blue-secondary;
+	padding: 10px 12px;
+
+	h3 {
+		margin: 0;
+		color: $black;
+		font-size: 1rem;
+
+		a {
+			color: $black;
+		}
+	}
+}
+
+.middle-content {
+	float: left;
+	width: 100%;
+	padding: 12px 15px;
+	background: $white;
+
+	a {color: inherit;}
+
+	ul {
+		padding: 20px 0 0 0;
+		margin: 0;
+		list-style: none;
+
+		li:before {
+		    content: "\f105";
+			font-family: "FontAwesome";
+		    padding-right: 5px;
+		    font-size: 0.8rem;
+		    position: relative;
+		    bottom: 2px;
+		    color: $primary;
+		}
+	}
+}
+
+/***/
+
+.hejtman-content-left,
+.o-kraji-content-left {
+	float: left;
+}
+
+.hejtman-content-right,
+.o-kraji-content-right {
+	float: right;
+}
+
+/***/
+
+
+
+
+>>>>>>> abc3f92f89be1c8700c8540cb5937bb208927bdb
+.symbols-content {
+	height: 80%;
+}
+
+// Bottom HP
+
+.bottom-tile {
+	float: left;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.bottom-tile-heading {
+	background: $blue-primary;
+	padding: 10px 12px;
+
+	h3 {
+		margin: 0;
+		color: $white;
+		font-size: 1rem;
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+.bottom-tile-content {
+	display: none;
+
+	img {
+		float: left;
+		border-right: 1px solid #d9d8d8;
+		border-bottom: 1px solid #d9d8d8;
+		border-left: 1px solid #d9d8d8;
+	}
+}
+
+// Footer
+
+.footer {
+	background: $blue-primary;
+	color: $white;
+	font-size: .9rem;
+	padding: 1em 0;
+	margin-top: 2em;
+
+	a {
+		color: $white;
+	}
+}
+
+.footer-left-top {
+	margin-bottom: 2rem;
+	h3 {
+		font-weight: bold;
+	}
+}
+
+.footer-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		margin-bottom: 2px;
+	}
+}
+
+.footer-right-menu {
+	text-align: center;
+	margin-bottom: 2.5em;
+}
+
+.footer-menu {
+	list-style: none;
+	margin-bottom: 1rem;
+	padding: 0;
+
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+.footer-menu-languages {
+
+	display: inline-block;
+	margin: 0 auto;
+
+	li {
+		float: left;
+		margin: 0 0 5px 11px;
+		padding: 0 0 0 10px;
+		border-left: 1px solid $white;
+		line-height: 1rem;
+
+		&:first-child {
+			border: none;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+.copyright {
+	margin-top: 2em;
+}
+
+
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+
+/*** Extra small devices ONLY (portrait phones, less than 576px) ***/
+@include media-breakpoint-only(xs) {
+	@include wider-gutter;
+}
+
+
+/*** Small devices (landscape phones, 576px and up) ***/
+@include media-breakpoint-up(sm) {
+
+// Bottom HP
+
+.bottom-tile-heading {
+
+	h3 {
+		@include ellips;
+	}
+
+}
+
+// Footer 
+
+.footer {
+	padding: 2em 0;
+}
+
+.footer-right-menu {
+	float: right;
+	text-align: right;
+}
+
+.footer-menu {
+	float: right;
+	clear: right;
+
+	li {
+		float: left;
+		margin: 0 0 5px 11px;
+		padding: 0 0 0 10px;
+		border-left: 1px solid $white;
+		line-height: 1rem;
+
+			&:first-child {
+			border: none;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+.copyright {
+	float: right;
+	text-align: right;
+}
+
+} // end of media-breakpoint-up(sm)
+
+
+
+/*** Medium devices (tablets, 768px and up) ***/
+@include media-breakpoint-up(md) {
+
+// Type
+
+h1, .h1 {
+	font-size: 2.5rem;
+}
+
+h2, .h2 {
+	font-size: 2rem;
+}
+
+h3, .h3 {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+// Middle HP
+
+.bg-container {
+	padding-bottom: 2em;
+}
+
+.middle-block {
+	height: 100%;
+	background: $white;
+	margin-bottom: 0;
+}
+
+.middle-heading {
+	h3 {
+		@include ellips;
+	}
+}
+
+// Bottom HP
+
+.bottom-tile {
+	margin-bottom: 1.5em;
+}
+
+.bottom-tile-heading {
+
+}
+
+.bottom-tile-content {
+	display: block;
+}
+
+// Footer
+
+.footer {
+	margin-top: 0.5em;
+}
+
+} // end of media-breakpoint-up(md)
+
+
+
+// Medium devices (tablets, 768-991 px)
+@include media-breakpoint-only(md) {
+
+.hejtman-content-right,
+.o-kraji-content-right {
+	display: none;
+}	
+
+.bottom-tile-heading {
+	h3 {
+		font-size: .8rem;
+	}
+}
+
+} // end of media-breakpoint-only(md)
+
+
+// Large devices (desktops, 992-1200 px)
+@include media-breakpoint-only(lg) {
+
+
+
+.hejtman-content-right,
+.o-kraji-content-right {
+	max-width: 30%;
+}
+
+.bottom-tile-heading {
+	h3 {
+		font-size: .9rem;
+	}
+}
+
+} // end of media-breakpoint-only(lg)
