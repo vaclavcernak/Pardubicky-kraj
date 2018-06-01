@@ -18,26 +18,27 @@ $white: #ffffff;
 
 @mixin wider-gutter {
 
-	.container {
+	.container,
+	div[class^="col"] {
 	    padding-right: 15px;
 	    padding-left: 15px;
 	}
 
-	.row {
-		 margin-right: -15px;
-	    margin-left: -15px;
+	.container-fluid {
+		padding-right: 0;
+		padding-left: 0;
 	}
 
-	div[class^="col"] {
-		padding-left:15px; 
-		padding-right:15px;
+	.row {
+		margin-right: -15px;
+	    margin-left: -15px;
 	}
 
 }
 
 @mixin ellips {
 	overflow: hidden;
-   white-space: nowrap;
+    white-space: nowrap;
   	text-overflow: ellipsis;
 }
 
@@ -45,8 +46,8 @@ $white: #ffffff;
 
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 14px;
+	font-size: 0.9rem;
 }
 
 img {
@@ -65,11 +66,12 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 1.1rem;
+	font-weight: bold;
 }
 
 // Mobile-first styling
 
-// Misc 
+// BLocks
 
 .block {
 	float: left;
@@ -77,55 +79,152 @@ h3, .h3 {
 	margin-bottom: 2em;
 }
 
+.block-heading {
+	background-color: $blue-secondary;
+	padding: 10px;
+	position: relative;
+	
+	a {
+			color: $black;
+	}
+}
+
+.block-heading h2,
+.block-heading h3,
+.block-heading h4 {
+	margin: 0;
+	color: $black;
+	@include ellips;
+	font-size: 1.1rem;
+}
+
+.block-heading-dark {
+	background-color: $blue-primary;
+
+	a {
+		color: $white;
+	}
+}
+
+.block-heading-dark h2,
+.block-heading-dark h3,
+.block-heading-dark h4 {
+	color: $white;
+}
+
+.block-heading-moreLink {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	color: $white;
+	padding: 5px 10px;
+	background: $blue-primary;
+	font-size: 0.7rem;
+
+	a {
+		color: $white;
+	}
+}
+
 //
 
-.city {
-	float: left;
+// News HP 
+
+.news-next {
+	margin-bottom: 1em;
+}
+
+.news-item {
+	margin-bottom: 1em;
+}
+
+.news-next-item {
+	height: 100%;
+	@extend .bg-gray;
+}
+
+.news-next-item-text {
+	padding: 10px;
+	font-size: 1.1rem;
+	line-height: 1.3;
+
+	a {
+		color: inherit;
+	}
+}
+
+
+// Important links HP
+
+.bg-gray {
+	background-color: $gray;
+}
+
+.important-links-list {
+	
+}
+
+.arrow-style {
+	padding: 10px;
+	margin: 0;
+	list-style: none;
+
+	li {
+		margin: 0 0 5px;
+	    text-indent: -10px;
+	    padding-left: 10px;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	li:before {
+		    content: "\f105";
+			font-family: "FontAwesome";
+			font-weight: bold;
+		    padding-right: 5px;
+		    font-size: 1rem;
+		    color: $blue-primary;
+		}
+
+}
+
+// Newsletter HP
+
+.newsletter-signup {
+	background-color: $blue-secondary;
+	text-align: center;
+	padding: 5px 10px 10px 10px;
+}
+
+.newsletter-signup-text {
+	margin: 10px 0 13px;
+}
+
+.newsletter-signup-button {
+	background-color: $blue-primary;
+	color: $white;
+	padding: 5px 10px;
+
+	a {
+		color: $white;
+	}
 }
 
 // Middle HP 
 
 .bg-container {
-	background: $gray;
+	background-color: $gray;
 	padding-top: 2em;
 	margin-bottom: 2em;
-}
-
-.middle-heading-dark {
-	background: $blue-primary;
-	padding: 10px 12px;
-
-	h3 {
-		margin: 0;
-		color: $white;
-		font-size: 1rem;
-
-		a {
-			color: $white;
-		}
-	}
-}
-
-.middle-heading-light {
-	background: $blue-secondary;
-	padding: 10px 12px;
-
-	h3 {
-		margin: 0;
-		color: $black;
-		font-size: 1rem;
-
-		a {
-			color: $black;
-		}
-	}
 }
 
 .middle-content {
 	float: left;
 	width: 100%;
 	padding: 12px 15px;
-	background: $white;
+	background-color: $white;
 
 	a {color: inherit;}
 
@@ -141,7 +240,7 @@ h3, .h3 {
 		    font-size: 0.8rem;
 		    position: relative;
 		    bottom: 2px;
-		    color: $primary;
+		    color: $blue-primary;
 		}
 	}
 }
@@ -160,12 +259,11 @@ h3, .h3 {
 
 /***/
 
-
-
-
->>>>>>> abc3f92f89be1c8700c8540cb5937bb208927bdb
 .symbols-content {
 	height: 80%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 }
 
 // Bottom HP
@@ -177,7 +275,7 @@ h3, .h3 {
 }
 
 .bottom-tile-heading {
-	background: $blue-primary;
+	background-color: $blue-primary;
 	padding: 10px 12px;
 
 	h3 {
@@ -205,7 +303,7 @@ h3, .h3 {
 // Footer
 
 .footer {
-	background: $blue-primary;
+	background-color: $blue-primary;
 	color: $white;
 	font-size: .9rem;
 	padding: 1em 0;
@@ -280,12 +378,107 @@ h3, .h3 {
 
 /*** Extra small devices ONLY (portrait phones, less than 576px) ***/
 @include media-breakpoint-only(xs) {
-	@include wider-gutter;
+
+@include wider-gutter;
+
+// HP News 
+
+.carousel-row {
+	margin-left: -5px;
+	margin-right: -5px;
+
+	div[class^="col"] {
+	    padding-right: 5px;
+	    padding-left: 5px;
+	}
 }
+
+.carousel-row 
+
+// Weather
+
+.weather-info {
+	background-color: $blue-secondary;
+	padding: 10px;
+	position: relative;
+
+	h3 {
+		margin: 0;
+		color: $black;
+		font-size: 1rem;
+		font-weight: bold;
+
+		a {
+			color: $black;
+		}
+	}
+}
+
+.weather-info-grades {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.city {
+	display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    padding: 0;
+}
+
+.cityName,
+.weatherIcon,
+.temperature {
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	max-width: 100%;
+	align-self: center!important;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.weatherIcon {
+	text-align: center;
+}
+
+.temperature  {
+	text-align: right;
+}
+
+} // end of media-breakpoint-only(xs
 
 
 /*** Small devices (landscape phones, 576px and up) ***/
 @include media-breakpoint-up(sm) {
+
+// Weather
+
+.weather-info {
+	float: left;
+	padding:  0 10px 10px;
+
+	h3 {
+		margin: 0 0 50px;
+		color: $black;
+
+		a {
+			color: $black;
+		}
+	}
+}
+
+.weather-cities {
+	@extend .d-sm-flex;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.city {
+	text-align: center;
+}
 
 // Bottom HP
 
@@ -349,11 +542,6 @@ h2, .h2 {
 	font-size: 2rem;
 }
 
-h3, .h3 {
-	font-size: 1.3rem;
-	font-weight: bold;
-}
-
 // Middle HP
 
 .bg-container {
@@ -362,7 +550,7 @@ h3, .h3 {
 
 .middle-block {
 	height: 100%;
-	background: $white;
+	background-color: $white;
 	margin-bottom: 0;
 }
 
@@ -396,6 +584,17 @@ h3, .h3 {
 
 
 
+/*** Large devices (desktops, 992px and up) ***/
+@include media-breakpoint-up(lg) {
+
+.weather-cities {
+	width: 75%;
+}	
+
+} // end of media-breakpoint-up(lg)
+
+
+
 // Medium devices (tablets, 768-991 px)
 @include media-breakpoint-only(md) {
 
@@ -417,11 +616,14 @@ h3, .h3 {
 @include media-breakpoint-only(lg) {
 
 
+//
 
 .hejtman-content-right,
 .o-kraji-content-right {
 	max-width: 30%;
 }
+
+//
 
 .bottom-tile-heading {
 	h3 {
