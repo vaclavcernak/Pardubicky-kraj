@@ -19,7 +19,7 @@ $white: #ffffff;
 @mixin wider-gutter {
 
 	.container,
-	div[class^="col"] {
+	div[class*="col-"] {
 	    padding-right: 15px;
 	    padding-left: 15px;
 	}
@@ -128,14 +128,43 @@ h3, .h3 {
 
 //
 
+// Tiles HP
+
+.hp-tiles {
+	margin-bottom: 25px;
+}
+
+.hp-tile {
+	padding: 10px;
+	margin-bottom: 5px;
+	font-size: 0.9rem;
+	color: $white;
+	background-color: $blue-primary;
+}
+
 // News HP 
 
+.news-main-title h3,
+.news-main-title h4,
+.news-main-title h5 {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 0;
+	color: $white;
+}
+
+.news-main-title {
+	padding: 12px 12px;
+	background-color: $blue-primary;
+	margin-bottom: 20px;
+}
+
 .news-next {
-	margin-bottom: 1em;
+	margin-bottom: 10px;
 }
 
 .news-item {
-	margin-bottom: 1em;
+	margin-bottom: 10px;
 }
 
 .news-next-item {
@@ -586,6 +615,16 @@ h2, .h2 {
 
 /*** Large devices (desktops, 992px and up) ***/
 @include media-breakpoint-up(lg) {
+
+.hp-tile {
+	height: 100%;
+}	
+
+.news-main-title h3,
+.news-main-title h4,
+.news-main-title h5 {
+	font-size: 2.2rem;
+}
 
 .weather-cities {
 	width: 75%;
