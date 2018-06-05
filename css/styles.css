@@ -10888,10 +10888,11 @@ h3, .h3 {
   }
   /* line 619, ../sass/styles.scss */
   .top-navigation ul {
+    display: block !important;
     padding: 0;
     margin: 0;
   }
-  /* line 623, ../sass/styles.scss */
+  /* line 624, ../sass/styles.scss */
   .top-navigation ul li {
     float: left;
     padding-top: 5px;
@@ -10903,62 +10904,62 @@ h3, .h3 {
     font-size: 0.8rem;
     font-weight: bold;
   }
-  /* line 636, ../sass/styles.scss */
+  /* line 637, ../sass/styles.scss */
   .top-navigation ul li:last-child {
     padding-right: 0;
     border-right: 0;
   }
 
-  /* line 646, ../sass/styles.scss */
+  /* line 647, ../sass/styles.scss */
   .weather-info {
     float: left;
     padding: 0 10px 10px;
   }
-  /* line 650, ../sass/styles.scss */
+  /* line 651, ../sass/styles.scss */
   .weather-info h3 {
     margin: 0 0 50px;
     color: #1d1d1b;
   }
-  /* line 654, ../sass/styles.scss */
+  /* line 655, ../sass/styles.scss */
   .weather-info h3 a {
     color: #1d1d1b;
   }
 
-  /* line 660, ../sass/styles.scss */
+  /* line 661, ../sass/styles.scss */
   .weather-cities {
     width: 80%;
     margin: 0 auto;
   }
 
-  /* line 666, ../sass/styles.scss */
+  /* line 667, ../sass/styles.scss */
   .city {
     text-align: center;
   }
 
-  /* line 674, ../sass/styles.scss */
+  /* line 675, ../sass/styles.scss */
   .bottom-tile-heading h3 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  /* line 682, ../sass/styles.scss */
+  /* line 683, ../sass/styles.scss */
   .footer {
     padding: 2em 0;
   }
 
-  /* line 686, ../sass/styles.scss */
+  /* line 687, ../sass/styles.scss */
   .footer-right-menu {
     float: right;
     text-align: right;
   }
 
-  /* line 691, ../sass/styles.scss */
+  /* line 692, ../sass/styles.scss */
   .footer-menu {
     float: right;
     clear: right;
   }
-  /* line 695, ../sass/styles.scss */
+  /* line 696, ../sass/styles.scss */
   .footer-menu li {
     float: left;
     margin: 0 0 5px 11px;
@@ -10966,14 +10967,14 @@ h3, .h3 {
     border-left: 1px solid #ffffff;
     line-height: 1rem;
   }
-  /* line 702, ../sass/styles.scss */
+  /* line 703, ../sass/styles.scss */
   .footer-menu li:first-child {
     border: none;
     margin-left: 0;
     padding-left: 0;
   }
 
-  /* line 710, ../sass/styles.scss */
+  /* line 711, ../sass/styles.scss */
   .copyright {
     float: right;
     text-align: right;
@@ -10981,23 +10982,23 @@ h3, .h3 {
 }
 /*** Medium devices (tablets, 768px and up) ***/
 @media (min-width: 768px) {
-  /* line 724, ../sass/styles.scss */
+  /* line 725, ../sass/styles.scss */
   h1, .h1 {
     font-size: 2.5rem;
   }
 
-  /* line 728, ../sass/styles.scss */
+  /* line 729, ../sass/styles.scss */
   h2, .h2 {
     font-size: 2rem;
   }
 
-  /* line 734, ../sass/styles.scss */
+  /* line 735, ../sass/styles.scss */
   .top {
     float: right;
     flex-direction: row;
   }
 
-  /* line 739, ../sass/styles.scss */
+  /* line 740, ../sass/styles.scss */
   .top-socials {
     margin-top: 3px;
     margin-left: 20px;
@@ -11005,11 +11006,11 @@ h3, .h3 {
     order: inherit;
   }
 
-  /* line 749, ../sass/styles.scss */
+  /* line 750, ../sass/styles.scss */
   .top-navigation {
     margin-top: -5px;
   }
-  /* line 753, ../sass/styles.scss */
+  /* line 754, ../sass/styles.scss */
   .top-navigation ul li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -11018,96 +11019,96 @@ h3, .h3 {
     font-size: 0.9rem;
   }
 
-  /* line 765, ../sass/styles.scss */
+  /* line 766, ../sass/styles.scss */
   .bg-container {
     padding-bottom: 2em;
   }
 
-  /* line 769, ../sass/styles.scss */
+  /* line 770, ../sass/styles.scss */
   .middle-block {
     height: 100%;
     background-color: #ffffff;
     margin-bottom: 0;
   }
 
-  /* line 776, ../sass/styles.scss */
+  /* line 777, ../sass/styles.scss */
   .middle-heading h3 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  /* line 783, ../sass/styles.scss */
+  /* line 784, ../sass/styles.scss */
   .bottom-tile {
     margin-bottom: 1.5em;
   }
 
-  /* line 791, ../sass/styles.scss */
+  /* line 792, ../sass/styles.scss */
   .bottom-tile-content {
     display: block;
   }
 
-  /* line 797, ../sass/styles.scss */
+  /* line 798, ../sass/styles.scss */
   .footer {
     margin-top: 0.5em;
   }
 }
 /*** Large devices (desktops, 992px and up) ***/
 @media (min-width: 992px) {
-  /* line 814, ../sass/styles.scss */
+  /* line 815, ../sass/styles.scss */
   .hp-tiles {
     margin-bottom: 30px;
     margin-top: -40px;
     position: relative;
   }
 
-  /* line 820, ../sass/styles.scss */
+  /* line 821, ../sass/styles.scss */
   .hp-tile {
     height: 100%;
     text-align: center;
   }
 
-  /* line 825, ../sass/styles.scss */
+  /* line 826, ../sass/styles.scss */
   .news-main-title h3,
   .news-main-title h4,
   .news-main-title h5 {
     font-size: 2.2rem;
   }
 
-  /* line 831, ../sass/styles.scss */
+  /* line 832, ../sass/styles.scss */
   .weather-cities {
     width: 75%;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* line 842, ../sass/styles.scss */
+  /* line 843, ../sass/styles.scss */
   .top-navigation {
     margin-top: 0px;
   }
-  /* line 845, ../sass/styles.scss */
+  /* line 846, ../sass/styles.scss */
   .top-navigation ul li {
     font-size: 0.8rem;
   }
 
-  /* line 850, ../sass/styles.scss */
+  /* line 851, ../sass/styles.scss */
   .hejtman-content-right,
   .o-kraji-content-right {
     display: none;
   }
 
-  /* line 856, ../sass/styles.scss */
+  /* line 857, ../sass/styles.scss */
   .bottom-tile-heading h3 {
     font-size: .8rem;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* line 870, ../sass/styles.scss */
+  /* line 871, ../sass/styles.scss */
   .hejtman-content-right,
   .o-kraji-content-right {
     max-width: 30%;
   }
 
-  /* line 878, ../sass/styles.scss */
+  /* line 879, ../sass/styles.scss */
   .bottom-tile-heading h3 {
     font-size: .9rem;
   }
