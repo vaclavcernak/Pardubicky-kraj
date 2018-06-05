@@ -128,13 +128,105 @@ h3, .h3 {
 
 //
 
+// Header
+
+.container-header {
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(199,199,199,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(199,199,199,1);
+	box-shadow: 0px 0px 5px 0px rgba(199,199,199,1);
+	padding-top: 20px;
+}
+
+.logo {
+	//padding: 0 0 20px 0;
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+// Search Form
+
+.top-search {
+	align-self: flex-end;
+}
+
+.searchForm {
+
+	form {
+		display: flex;
+	}
+}
+
+.searchFormT {
+	padding: 5px 10px;
+	font-size: 0.8rem;
+	margin: 0;
+	border: 1px solid $blue-primary;
+}
+
+.searchSubmit {
+	padding: 5px 10px;
+	font-size: 0.8rem;
+	margin: 0;
+	border: 0;
+	background-color: $blue-primary;
+	color: $white;
+}
+
+// Top Socials
+
+.top-socials {
+	order: -1;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.top-socials-item {
+	float: left;
+	margin-left: 15px;
+
+	a {
+		color: $blue-primary;
+	}
+
+	i {
+		font-size: 1.7rem;
+	}
+}
+
+// Header Menu
+
+.nav-toggle {
+	text-align: left;
+	width: 100%;
+	border: 0;
+	padding: 7px 10px;
+	font-size: 1rem;
+	color: $blue-primary;
+	border: 1px solid $blue-primary;
+	background-color: $white;
+	cursor: pointer;
+
+	i {
+		margin-right: 5px;
+	}
+}
+
 // Tiles HP
 
 .hp-tiles {
-	margin-bottom: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .hp-tile {
+	display: block;
 	padding: 10px;
 	margin-bottom: 5px;
 	font-size: 0.9rem;
@@ -410,6 +502,37 @@ h3, .h3 {
 
 @include wider-gutter;
 
+// Header Menu
+
+.top-navigation {
+	background: $gray;
+	margin-bottom: 20px;
+}
+
+.top-navigation ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin: 0;
+		a {
+			color: #444444;
+			display: block;
+			padding: 9px 10px 8px;
+			border-right: 1px solid $blue-primary;
+			border-bottom: 1px solid $blue-primary;
+			border-left: 1px solid $blue-primary;
+
+			&:hover {
+				background-color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 // HP News 
 
 .carousel-row {
@@ -445,15 +568,15 @@ h3, .h3 {
 
 .weather-info-grades {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 0px;
+	right: 15px;
 }
 
 .city {
 	display: -webkit-box!important;
     display: -ms-flexbox!important;
     display: flex!important;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .cityName,
@@ -482,6 +605,41 @@ h3, .h3 {
 
 /*** Small devices (landscape phones, 576px and up) ***/
 @include media-breakpoint-up(sm) {
+
+// Header menu
+
+.nav-toggle {
+	display: none;
+}
+
+.top-navigation {
+	float: right;
+	margin-top: 5px;
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+		    float: left;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		    margin-left: 10px;
+		    padding-right: 9px;
+		    display: inline-block;
+		    border-right: 1px solid $blue-primary;
+		    font-size: 0.8rem;
+		    font-weight: bold;
+		}
+
+
+		li:last-child {
+			padding-right: 0;
+			border-right: 0;
+		}
+	}
+}
+
 
 // Weather
 
@@ -571,6 +729,37 @@ h2, .h2 {
 	font-size: 2rem;
 }
 
+
+
+.top {
+	float: right;
+	flex-direction: row;
+}
+
+.top-socials {
+	margin-top: 3px;
+	margin-left: 20px;
+	margin-bottom: 0;
+	order: inherit;
+}
+
+
+// Header menu
+
+.top-navigation {
+	margin-top: -5px;
+	ul {
+
+		li {
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		    margin-left: 15px;
+		    padding-right: 14px;
+		    font-size: 0.9rem;
+		}
+	}
+}
+
 // Middle HP
 
 .bg-container {
@@ -616,8 +805,21 @@ h2, .h2 {
 /*** Large devices (desktops, 992px and up) ***/
 @include media-breakpoint-up(lg) {
 
+
+// Header Menu
+
+
+//
+
+.hp-tiles {
+	margin-bottom: 30px;
+	margin-top: -40px;
+	position: relative;
+}
+
 .hp-tile {
 	height: 100%;
+	text-align: center;
 }	
 
 .news-main-title h3,
@@ -636,6 +838,14 @@ h2, .h2 {
 
 // Medium devices (tablets, 768-991 px)
 @include media-breakpoint-only(md) {
+
+.top-navigation {
+	margin-top: 0px;
+
+	ul li {
+		font-size: 0.8rem;
+	}
+}
 
 .hejtman-content-right,
 .o-kraji-content-right {

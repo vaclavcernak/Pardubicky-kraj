@@ -9,4 +9,12 @@ $(document).ready(function() {
     });
   });   
 });
+
+$(document).ready(function() {
+ $(".nav-toggle").click(function () {
+ 	$( ".top-navigation ul" ).slideToggle( "slow" );
+  });   
+});
+
+
   

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">	
@@ -14,73 +14,94 @@
 </head>
 <body>
 	<header>
-		<div class="container">
+		<div class="container-header">
+			<div class="container">
 
-			<div class="row">
-				<div class="col-md-3">
-					<div class="logo"><img src="logo.png" alt="logo"></div>
-				</div>
-				<div class="col-md-9">
-					<div class="top">
-						<div class="top-search">
-							
-						</div>
-						<div class="top-socials">
-							
-						</div>
-						<div class="top-navigation">
-							<nav>
-								<ul>
-									<li><a href="">Úvodní strana</a></li>
-									<li><a href="">Samospráva</a></li>
-									<li><a href="">Krajský úřad</a></li>
-									<li><a href="">Úřední deska</a></li>
-									<li><a href="">Mapy</a></li>
-									<li><a href="">Kontakty</a></li>
-								</ul>
-							</nav>
-						</div> <!-- /.top-navigation -->
-					</div> <!-- /.top -->
-				</div>
-			</div>
+				<div class="row">
+					<div class="col-6 col-sm-5 col-md-4">
+						<div class="logo"><a href=""><img src="logo.png" alt="logo"></a></div>
+					</div>
+					<div class="col-6 col-sm-7 col-md-8">
+						<div class="top">
+							<div class="top-search">
+								<div class="searchForm">
+									<form>
+										<input type="text" name="searchText" class="searchFormT">
+										<input type="hidden" name="searchTitle" value="1"><input type="submit" class="searchSubmit" title="Hledat" value="Hledat" name="Hledat" accesskey="4">
+										<!-- <a href=""><img src="/images/bg-search-new-lupa.png"></a> -->
+									</form>
+								</div>
+							</div>
+							<div class="top-socials">
+								<div class="top-socials-item">
+									<a href=""><i class="fa fa-facebook-square"></i></a>
+								</div>	
+								<div class="top-socials-item">
+									<a href=""><i class="fa fa-instagram"></i></a>
+								</div>
+							</div>
+						</div> <!-- /.top -->	
+					</div>
+				</div>	
+				<div class="top-navigation">
+					<nav>
+						<button class="nav-toggle">
+						    <span><i class="fa fa-bars"></i> Menu</span>
+						</button>
+						<ul>
+							<li><a href="">Úvodní strana</a></li>
+							<li><a href="">Samospráva</a></li>
+							<li><a href="">Krajský úřad</a></li>
+							<li><a href="">Úřední deska</a></li>
+							<li><a href="">Mapy</a></li>
+							<li><a href="">Kontakty</a></li>
+						</ul>
+					</nav>
+				</div> <!-- /.top-navigation -->
+			</div> <!-- /.container -->
 
 			<div class="top-banner">
-				<img src="images/banner-sample.png" alt="banner">
+				<img src="images/banner-sample.jpg" alt="banner">
 			</div>
+
+		</div> <!-- /.container-header -->
+
+		<div class="container">
 
 			<div class="hp-tiles">
 				<div class="row">
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Životní situace</div>
+						<a href=""><span class="hp-tile"><i class="fa fa-info-circle"></i>Životní situace</span></a>
 					</div>	
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Zdravotnictví</div>
+						<a href=""><span class="hp-tile">Zdravotnictví</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Školství</div>
+						<a href=""><span class="hp-tile">Školství</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Sociální věci</div>
+						<a href=""><span class="hp-tile">Sociální věci</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Doprava Silniční hospodářství</div>
+						<a href=""><span class="hp-tile">Doprava Silniční hospodářství</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Kultura Sport Cestovní ruch</div>
+						<a href=""><span class="hp-tile">Kultura Sport Cestovní ruch</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Životní prostředí Zemědělství</div>
+						<a href=""><span class="hp-tile">Životní prostředí Zemědělství</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Regionální rozvoj</div>
+						<a href=""><span class="hp-tile">Regionální rozvoj</span></a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<div class="hp-tile">Dotační programy Granty</div>
+						<a href=""><span class="hp-tile">Dotační programy Granty</span></a>
 					</div>
 				</div>
 			</div> <!-- /.hp-tiles -->
 
 		</div> <!-- /.container -->
+		
 	</header>
 
 	<main>
@@ -194,9 +215,6 @@
 									<li><a href="">Krajský akční plán rozvoje vzdělání</a></li>
 									<li><a href="">Poskytované dotace z rozpočtu Pardubického kraje</a></li>
 									<li><a href="">Rodinné pasy</a></li>
-									<li><a href="">Cyklopecky Pardubického kraje</a></li>
-									<li><a href="">Program údržby a rozvoje krajského majetku</a></li>
-									<li><a href="">Kotlíkové dotace</a></li>
 									<li><a href="">Zapojení organizací neformálního a zájmového vzdělávání MAP</a></li>
 									<li><a href="">Informace o Pardubickém kraji</a></li>
 								</ul>
