@@ -1,20 +1,28 @@
+// Video channel HP
+
 $(document).ready(function() {
- $(".video").click(function () {
-    var theModal = $(this).data("target"),
-    videoSRC = $(this).attr("data-video"),
-    videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-    $(theModal + ' iframe').attr('src', videoSRCauto);
-    $(theModal + ' button.close').click(function () {
-      $(theModal + ' iframe').attr('src', videoSRC);
-    });
-  });   
+	var $videoSrc;  
+	$('.video-btn').click(function() {
+	    $videoSrc = $(this).data( "src" );
+	});
+
+	// when the modal is opened autoplay it  
+	$('#video-modal').on('shown.bs.modal', function (e) {
+		// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+		$("#video").attr('src',$videoSrc + "?rel=0&showinfo=0&modestbranding=1&autoplay=1" ); 
+	})
+	  
+	// stop playing the youtube video when I close the modal
+	$('#video-modal').on('hide.bs.modal', function (e) {
+	    // a poor man's stop video
+	    $("#video").attr('src',$videoSrc); 
+	}) 
 });
+
+// Responsive menu toggler
 
 $(document).ready(function() {
  $(".nav-toggle").click(function () {
  	$( ".top-navigation ul" ).slideToggle( "slow" );
   });   
 });
-
-
-  

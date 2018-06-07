@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">	
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
 	<title>Pardubický kraj - HP</title>
 </head>
@@ -71,31 +71,49 @@
 			<div class="hp-tiles">
 				<div class="row">
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile"><i class="fa fa-info-circle"></i>Životní situace</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile1">Životní situace</span>
+						</a>
 					</div>	
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Zdravotnictví</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile2">Zdravotnictví</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Školství</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile3">Školství</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Sociální věci</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile4">Sociální věci</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Doprava Silniční hospodářství</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile5">Doprava Silniční hospodářství</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Kultura Sport Cestovní ruch</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile6">Kultura Sport Cestovní ruch</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Životní prostředí Zemědělství</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile7">Životní prostředí Zemědělství</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Regionální rozvoj</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile8">Regionální rozvoj</span>
+						</a>
 					</div>
 					<div class="col-md-4 col-lg">
-						<a href=""><span class="hp-tile">Dotační programy Granty</span></a>
+						<a href="">
+							<span class="hp-tile hp-tile9">Dotační programy Granty</span>
+						</a>
 					</div>
 				</div>
 			</div> <!-- /.hp-tiles -->
@@ -231,7 +249,21 @@
 							<div class="video-channel-content">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe class="embed-responsive-item" width="100%" height="" src="https://www.youtube.com/embed/yWXf8Gl2dZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-								</div>
+								</div>	
+								<div class="iframe-placeholder video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/yWXf8Gl2dZo" data-target="#video-modal"></div>
+								<!-- Modal -->
+								<div class="modal fade" id="video-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-body">     
+								        <!-- 16:9 aspect ratio -->
+											<div class="embed-responsive embed-responsive-16by9">
+											  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+											</div>
+								      </div>
+								    </div>
+								  </div>
+								</div> <!-- /.modal -->
 							</div>
 						</div> <!-- /.video-channel -->
 

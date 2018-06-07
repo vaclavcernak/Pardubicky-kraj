@@ -1,6 +1,9 @@
 // Custom variables (override)
 @import "customVariables";
 
+// Custom Fonts
+@import "customFonts"; // icons
+
 // Bootstrap and its default variables
 @import "bootstrap";
 
@@ -134,7 +137,6 @@ h3, .h3 {
 	}
 }
 
-//
 
 // Header
 
@@ -240,7 +242,67 @@ h3, .h3 {
 	font-size: 0.9rem;
 	color: $white;
 	background-color: $blue-primary;
+	
+	&:hover,
+	&:hover::before {
+		color: $hover-yellow;
+	}
 }
+
+.hp-tile::before {
+	font-family: 'icomoon' !important;
+  	speak: none;
+  	font-style: normal;
+  	font-weight: normal;
+  	font-variant: normal;
+  	text-transform: none;
+  	line-height: 1;
+  	font-size: 1.25rem;
+  	margin-right: 10px;
+  	position: relative;
+  	bottom: -2px;
+
+  	/* Better Font Rendering =========== */
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+.hp-tile1::before {
+	content: "\e906";
+}
+
+.hp-tile2::before {
+	content: "\e905";
+}
+
+.hp-tile3::before {
+	content: "\e900";
+}
+
+.hp-tile4::before {
+	content: "\e902";
+}
+
+.hp-tile5::before {
+	content: "\e901";
+}
+
+.hp-tile6::before {
+	content: "\e903";
+}
+
+.hp-tile7::before {
+	content: "\e907";
+}
+
+.hp-tile8::before {
+	content: "\e908";
+}
+
+.hp-tile9::before {
+	content: "\e904";
+}
+
 
 // News HP 
 
@@ -337,6 +399,26 @@ h3, .h3 {
 		    color: $blue-primary;
 		}
 
+}
+
+// Video Channel
+
+.video-channel-content {
+	position: relative;
+}
+
+.iframe-placeholder {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	cursor: pointer;
+}
+
+.modal-dialog {
+	max-width: 800px;
+	margin: 30px auto;
 }
 
 // Newsletter HP
@@ -808,6 +890,31 @@ h2, .h2 {
 	}
 }
 
+// HP Tiles
+
+.hp-tile {
+	text-align: center;
+	margin-bottom: 20px;
+}	
+
+.hp-tile::before {
+  	font-size: 2.2rem;
+  	display: block;
+  	text-align: center;
+  	margin-bottom: 10px;
+  	margin-top: 5px;
+  	margin-right: inherit;
+  	position: static;
+  	bottom: inherit;
+}
+
+//  Video
+
+
+.iframe-placeholder {
+	display: block;
+}
+
 // Middle HP
 
 .bg-container {
@@ -873,14 +980,15 @@ h2, .h2 {
 //
 
 .hp-tiles {
-	margin-bottom: 30px;
 	margin-top: -40px;
 	position: relative;
+	margin-bottom: 30px;
 }
 
 .hp-tile {
 	height: 100%;
-	text-align: center;
+	margin-bottom: 0px;
+	font-size: 0.8rem;
 }	
 
 .news-main-title h3,
