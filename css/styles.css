@@ -11094,8 +11094,8 @@ h3, .h3 {
   /* line 759, ../sass/styles.scss */
   .weather-info-grades {
     position: absolute;
-    top: 0px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
   }
 
   /* line 765, ../sass/styles.scss */
