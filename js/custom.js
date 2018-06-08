@@ -26,3 +26,19 @@ $(document).ready(function() {
  	$( ".top-navigation ul" ).slideToggle( "slow" );
   });   
 });
+
+// HP News carousel autocycle
+
+$(document).ready(function() {
+	function newsCycle () {
+		var t = $(window).scrollTop();
+		$( ".news-itemC:first-child" ).appendTo('.carousel-row'); 
+		$(window).scrollTop(t);
+	};
+	setInterval(newsCycle, 5000); // Delay interval 
+});
+
+// Search in mobile 
+$(document).ready(function() {
+	$( ".top-search" ).clone().addClass('mobile-top-search').insertBefore( ".top-navigation" );
+});

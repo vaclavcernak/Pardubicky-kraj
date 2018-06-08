@@ -162,6 +162,10 @@ h3, .h3 {
 
 // Search Form
 
+.mobile-top-search {
+	display: none;
+}
+
 .top-search {
 	align-self: flex-end;
 }
@@ -247,6 +251,10 @@ h3, .h3 {
 	&:hover::before {
 		color: $hover-yellow;
 	}
+
+	&:hover {
+		background-color: $hover-blue;
+	}
 }
 
 .hp-tile::before {
@@ -306,38 +314,40 @@ h3, .h3 {
 
 // News HP 
 
-.news-main-title h3,
-.news-main-title h4,
-.news-main-title h5 {
-	font-size: 1.3rem;
-	font-weight: bold;
-	margin: 0;
-	color: $white;
-}
 
-.news-main-title {
-	padding: 12px 12px;
-	background-color: $blue-primary;
-	margin-bottom: 20px;
-
-	&:hover {
-		background-color: $hover-blue;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-}
-
-.news-next {
+.news-items {
 	margin-bottom: 10px;
+}
+
+.news-itemC {
+	margin-bottom: 15px;
+	@extend .col-6;
+
+	&:first-child {
+		@extend .col-12;
+		margin-bottom: 20px;
+
+		.news-item-text {
+			padding: 12px 12px;
+			background-color: $blue-primary;
+			margin-bottom: 20px;
+			font-size: 1.3rem;
+			font-weight: bold;
+			margin: 0;
+			color: $white;
+
+			&:hover {
+				background-color: $hover-blue;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .news-item {
-	margin-bottom: 10px;
-}
-
-.news-next-item {
 	height: 100%;
 	@extend .bg-gray;
 
@@ -350,7 +360,7 @@ h3, .h3 {
 	}
 }
 
-.news-next-item-text {
+.news-item-text {
 	padding: 10px;
 	font-size: 1rem;
 	line-height: 1.3;
@@ -358,6 +368,10 @@ h3, .h3 {
 	a {
 		color: inherit;
 	}
+}
+
+.news-moreLink-mobile {
+	display: none;
 }
 
 
@@ -616,7 +630,28 @@ h3, .h3 {
 /*** MEDIA QUERIES ***/
 /*********************/
 
+/*** XXS devices ONLY (less than 400px) ***/
+
+@media all and (max-width: 400px) {
+
+.top-search {
+	display: none;
+}
+
+.mobile-top-search {
+	display: block;
+	margin: 0 0 20px 0;
+
+	.searchFormT {
+		width: 100%;
+	}
+}
+
+}
+
+
 /*** Extra small devices ONLY (portrait phones, less than 576px) ***/
+
 @include media-breakpoint-only(xs) {
 
 @include wider-gutter;
@@ -654,17 +689,34 @@ h3, .h3 {
 
 // HP News 
 
+.news .block-heading-moreLink {
+	display: none;
+}
+
+.news-moreLink-mobile {
+	display: inherit;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 25px;
+
+    a {
+    	color: $white;
+    	padding: 8px 10px;
+    	background-color: $blue-primary;
+    }
+}
+
 .carousel-row {
 	margin-left: -5px;
 	margin-right: -5px;
 
-	div[class^="col"] {
+	div.news-itemC {
 	    padding-right: 5px;
 	    padding-left: 5px;
 	}
 }
 
-.carousel-row 
+
 
 // Weather
 
@@ -991,9 +1043,12 @@ h2, .h2 {
 	font-size: 0.8rem;
 }	
 
-.news-main-title h3,
-.news-main-title h4,
-.news-main-title h5 {
+.news-itemC {
+	flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.news-itemC:first-child .news-item-text {
 	font-size: 2.2rem;
 }
 
