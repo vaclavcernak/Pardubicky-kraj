@@ -42,12 +42,16 @@ $(document).ready(function() {
 
 	// next
 	$(".carousel-control-item-next").click(function () {
+		//$( ".news-itemC:nth-child(2)" ).hide(); 
+		//$( ".news-itemC:nth-child(2)" ).fadeIn(1000); 
 		$( ".news-itemC:first-child" ).appendTo('.carousel-row'); 
   	});
 
 	// prev
-  	$(".carousel-control-item-prev").click(function () {
+  	$(".carousel-control-item-prev").click(function () {	
 		$( ".news-itemC:last-child" ).prependTo('.carousel-row'); 
+		//$( ".news-itemC:first-child" ).hide(); 
+		//$( ".news-itemC:first-child" ).fadeIn(1000); 
   	});
 });
 
