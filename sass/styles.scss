@@ -561,25 +561,21 @@ h3, .h3 {
 	}
 }
 
-.newsletter-signup-button {
-	background-color: $blue-primary;
+.newsletter-signup-button a {
+	
 	color: $white;
 	text-align: center;
 	margin-bottom: 10px;
-
-	a {
-		padding: 8px 10px;
-		display: block;
-		color: $white;
-	}
-
+	background-color: $blue-primary;
+	padding: 8px 10px;
+	display: block;
+	color: $white;
+	
 	&:hover {
 		background-color: $hover-blue;
-
-		a { 
-			color: $hover-yellow;
-			text-decoration: none; 
-		}
+		color: $hover-yellow;
+		text-decoration: none; 
+		
 	}
 }
 
