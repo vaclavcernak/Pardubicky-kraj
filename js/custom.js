@@ -29,14 +29,28 @@ $(document).ready(function() {
 
 // HP News carousel autocycle
 
+// $(document).ready(function() {
+// 	function newsCycle () {
+// 		var t = $(window).scrollTop();
+// 		$( ".news-itemC:first-child" ).appendTo('.carousel-row'); 
+// 		$(window).scrollTop(t);
+// 	};
+// 	setInterval(newsCycle, 5000); // Delay interval 
+// });
+
 $(document).ready(function() {
-	function newsCycle () {
-		var t = $(window).scrollTop();
+
+	// next
+	$(".carousel-control-item-next").click(function () {
 		$( ".news-itemC:first-child" ).appendTo('.carousel-row'); 
-		$(window).scrollTop(t);
-	};
-	setInterval(newsCycle, 5000); // Delay interval 
+  	});
+
+	// prev
+  	$(".carousel-control-item-prev").click(function () {
+		$( ".news-itemC:last-child" ).prependTo('.carousel-row'); 
+  	});
 });
+
 
 // Search in mobile 
 $(document).ready(function() {

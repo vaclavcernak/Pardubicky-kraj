@@ -325,9 +325,47 @@ h3, .h3 {
 
 // News HP 
 
+.carousel-controls {
+	
+}
+
+.carousel-control-item {
+	opacity: 0.8;
+	cursor: pointer;
+	color: $white;
+	position: absolute;
+	top: 50px;
+	z-index: 5;
+
+	&:hover {
+		opacity: 1;	
+	}
+
+	&::before {
+		font-family: "FontAwesome";
+		font-size: 2rem;
+	}
+}
+
+.carousel-control-item-prev {
+	left: 20px;
+
+	&::before {
+		content: "\f0a8";
+	}
+}
+
+.carousel-control-item-next {
+	right: 20px;
+
+	&::before {
+		content: "\f0a9";
+	}
+}
 
 .news-items {
 	margin-bottom: 10px;
+	position: relative;
 }
 
 .news-itemC {
@@ -841,6 +879,17 @@ h3, .h3 {
 	}
 }
 
+// News HP
+
+.carousel-control-item {
+	top: 90px;
+
+	&::before {
+		font-size: 2.5rem;
+	}
+}
+
+
 
 // Weather
 
@@ -981,7 +1030,6 @@ h2, .h2 {
 
 //  Video
 
-
 .iframe-placeholder {
 	display: block;
 }
@@ -1062,6 +1110,16 @@ h2, .h2 {
 	font-size: 0.8rem;
 }	
 
+// News HP
+
+.carousel-control-item {
+	top: 120px;
+
+	&::before {
+		font-size: 3rem;
+	}
+}
+
 .news-itemC {
 	flex: 0 0 25%;
     max-width: 25%;
@@ -1071,12 +1129,27 @@ h2, .h2 {
 	font-size: 2.2rem;
 }
 
+//
+
 .weather-cities {
 	width: 75%;
 }	
 
 } // end of media-breakpoint-up(lg)
 
+
+
+
+/*** Extra Large devices (desktops, 1200px and up) ***/
+@include media-breakpoint-up(xl) {
+
+// News HP
+
+.carousel-control-item {
+	top: 135px;
+}
+
+} // end of media-breakpoint-up(xl)
 
 
 // Medium devices (tablets, 768-991 px)
