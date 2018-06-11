@@ -49,14 +49,15 @@ $(document).ready(function() {
 
 	// prev
   	$(".carousel-control-item-prev").click(function () {	
-		$( ".news-itemC:last-child" ).prependTo('.carousel-row'); 
+		$( ".news-itemC:last-child" ).prependTo('.carousel-row');
 		//$( ".news-itemC:first-child" ).hide(); 
 		//$( ".news-itemC:first-child" ).fadeIn(1000); 
   	});
 });
 
 
-// Search in mobile 
+// Search in mobile
+
 $(document).ready(function() {
 	$( ".top-search" ).clone().addClass('mobile-top-search').insertBefore( ".top-navigation" );
 });
