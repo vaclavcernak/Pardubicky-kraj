@@ -470,6 +470,12 @@ h3, .h3 {
 	position: relative;
 }
 
+.moreLink-tablet-only {
+	display: none;
+	text-align: center;
+    margin-top: 15px;
+}
+
 .iframe-placeholder {
 	display: none;
 	position: absolute;
@@ -502,22 +508,60 @@ h3, .h3 {
 
 .newsletter-signup {
 	background-color: $blue-secondary;
-	text-align: center;
+	//text-align: center;
 	padding: 5px 10px 10px 10px;
 }
 
 .newsletter-signup-text {
-	margin: 10px 0 13px;
+	margin: 5px 0 10px;
+}
+
+.newsletter-signup-text-title {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: bold;
+}
+
+.personal-agree {
+	padding-bottom: 5px;
+
+	label {
+		display: inline;
+		font-size: 0.8rem;
+		padding-right: 5px;
+	}
+
+	input[type="checkbox"] {
+    	position: relative;
+		top: 3px;
+	}
+
 }
 
 .newsletter-signup-button {
 	background-color: $blue-primary;
 	color: $white;
-	padding: 5px 10px;
+	text-align: center;
+	margin-bottom: 10px;
 
 	a {
+		padding: 8px 10px;
+		display: block;
 		color: $white;
 	}
+
+	&:hover {
+		background-color: $hover-blue;
+
+		a { 
+			color: $hover-yellow;
+			text-decoration: none; 
+		}
+	}
+}
+
+.newsletter-personal-agree-link {
+	font-size: 0.8rem;
 }
 
 // Middle HP 
@@ -909,7 +953,7 @@ h3, .h3 {
 
 .weather-cities {
 	@extend .d-sm-flex;
-	width: 80%;
+	width: 81%;
 	margin: 0 auto;
 }
 
@@ -1161,6 +1205,14 @@ h2, .h2 {
 	ul li {
 		font-size: 0.8rem;
 	}
+}
+
+.block-heading-moreLink {
+	display: none;
+}
+
+.moreLink-tablet-only {
+	display: block;
 }
 
 .hejtman-content-right,
