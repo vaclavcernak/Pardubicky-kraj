@@ -78,6 +78,10 @@ input[type="text"] {
 	}
 }
 
+button:focus {
+	outline: 0;
+}
+
 // Type
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -963,7 +967,6 @@ input.searchFormT {
 // Header Menu
 
 .top-navigation {
-	background: $gray;
 	margin-bottom: 20px;
 }
 
@@ -976,12 +979,11 @@ input.searchFormT {
 	li {
 		margin: 0;
 		a {
-			color: #444444;
+			color: inherit;
 			display: block;
 			padding: 9px 10px 8px;
-			border-right: 1px solid $blue-primary;
-			border-bottom: 1px solid $blue-primary;
-			border-left: 1px solid $blue-primary;
+			background-color: #ececec;
+    		border-top: 2px solid #e3e3e3;
 
 			&:hover {
 				background-color: $white;
