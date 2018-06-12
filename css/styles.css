@@ -11462,11 +11462,6 @@ input.searchFormT {
     text-decoration: none;
     background: #ffdf00;
   }
-  /* line 1133, ../sass/styles.scss */
-  .top-navigation ul li:last-child a {
-    padding-right: 0;
-    border-right: 0;
-  }
 
   /* line 1142, ../sass/styles.scss */
   .carousel-control-item {
