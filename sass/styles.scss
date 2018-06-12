@@ -142,11 +142,16 @@ ol {
 	padding-right: 15px;
 }
 
-.sidebar-menu-heading h3::before {
-	font-family: "FontAwesome";
-	content: "\f0c9";
-	padding-right: 10px;
+.sidebar-menu-heading {
+	cursor: pointer;
+
+	h3::before {
+		font-family: "FontAwesome";
+		content: "\f0c9";
+		padding-right: 10px;
+	}
 }
+	
 
 // Sidebar-menu
 
@@ -1349,8 +1354,12 @@ h2, .h2 {
     margin-bottom: 2em;
 }
 
-.sidebar-menu-heading h3::before {
-	display: none;
+.sidebar-menu-heading {
+	cursor: initial;
+
+	h3::before {
+		display: none;
+	}
 }
 
 .sidebar-menu {
