@@ -80,8 +80,16 @@ input[type="text"] {
 
 // Type
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-bottom: 1rem;
+}
+
 h1, .h1 {
 	font-size: 1.7rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 1.5rem;
 }
 
 h2, .h2 {
@@ -93,7 +101,123 @@ h3, .h3 {
 	font-weight: bold;
 }
 
+h4, .h4 {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+ol {
+	li {
+		margin-bottom: 10px;
+		padding-left: 10px;
+	}
+}
+
+.page-content ul {
+	li {
+		margin-bottom: 5px;
+	}
+}
+
 // Mobile-first styling
+
+// Layout
+
+.sidebar {
+	margin-top: 2em;
+}
+.page-content {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+// Sidebar 
+
+.sidebar .block-heading {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sidebar-menu-heading h3::before {
+	font-family: "FontAwesome";
+	content: "\f0c9";
+	padding-right: 10px;
+}
+
+// Sidebar-menu
+
+.sidebar-menu {
+	display: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		margin: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: inherit;
+		padding: 7px 15px;
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	& > li > a { // 1st level
+		background-color: #ececec;
+		border-top: 2px solid #e3e3e3;
+
+		&:hover {
+			color: $blue-primary;
+		}
+
+		&.selectedMenu {
+			font-weight: bold;
+		}
+	}
+
+	& > li > ul > li > a { // 2nd level
+		padding-left: 15px;
+		background-color: #f6f6f6;
+		border-left: 1px solid #e3e3e3;
+		border-right: 1px solid #e3e3e3;
+
+		&:hover {
+			color: $blue-primary;
+		}
+
+		&.selectedMenu {
+			font-weight: bold;
+		}
+
+		&::before {
+			content: "—";
+			padding-right: 10px;
+		}
+	}
+
+	& > li > ul > li > ul > li > a { // 3rd level
+		padding-left: 45px;
+		border-left: 1px solid #e3e3e3;
+		border-right: 1px solid #e3e3e3;
+		font-size: 0.85rem;
+
+		&:hover,
+		&.selectedMenu {
+			background-color: $hover-yellow;
+		}
+	}
+}
+
+
 
 // BLocks
 
@@ -162,6 +286,27 @@ h3, .h3 {
 	right: 10px;
 }
 
+// Documents
+
+.itemAddInfoC {
+	margin-top: 3em;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+//////////////////////////////
 
 // Header
 
@@ -261,6 +406,34 @@ input.searchFormT {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: $gray;
+}
+
+.breadcrumbs {
+	list-style: none;
+	padding: 12px 0 0;
+	margin: 0;
+
+	li {
+		display: inline-block;
+		margin: 0 5px 12px 0px;
+		font-size: 0.8rem;
+
+		&::after {
+			content: "\f105";
+			font-family: "FontAwesome";
+			font-weight: bold;
+		    padding-left: 10px;
+		    color: $blue-primary;
+		}
+
+		&:last-child::after {
+			display: none;
+		}
+
+		&:last-child a {
+			color: inherit;
+		}
+	}
 }
 
 // Tiles HP
@@ -818,6 +991,16 @@ input.searchFormT {
 	}
 }
 
+// Breadcrumbs
+
+.breadcrumbs {
+    padding: 8px 0 0;
+
+ 	li {
+	    margin: 0 5px 8px 0px;
+	}
+}
+
 // HP News 
 
 .news .block-heading-moreLink {
@@ -1039,12 +1222,8 @@ input.searchFormT {
 
 // Type
 
-h1, .h1 {
-	font-size: 2.5rem;
-}
-
 h2, .h2 {
-	font-size: 2rem;
+	font-size: 1.4rem;
 }
 
 
@@ -1162,7 +1341,25 @@ h2, .h2 {
 @include media-breakpoint-up(lg) {
 
 
-// Header Menu
+// Sidebar
+
+.sidebar {
+    margin-bottom: 2em;
+}
+
+.sidebar-menu-heading h3::before {
+	display: none;
+}
+
+.sidebar-menu {
+	display: block !important;
+}
+
+// Page Content
+
+.page-content {
+	padding-left: 50px;
+}
 
 // Header menu
 

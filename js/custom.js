@@ -19,11 +19,19 @@ $(document).ready(function() {
 	}) 
 });
 
-// Responsive menu toggler
+// Responsive Top menu toggler
 
 $(document).ready(function() {
  $(".nav-toggle").click(function () {
  	$( ".top-navigation ul" ).slideToggle( "slow" );
+  });   
+});
+
+// Responsive Sidebar menu toggler
+
+$(document).ready(function() {
+ $(".sidebar-menu-heading").click(function () {
+ 	$( ".sidebar-menu" ).slideToggle( "slow" );
   });   
 });
 
