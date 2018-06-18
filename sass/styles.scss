@@ -48,6 +48,19 @@ $input-border: #aaaaaa;
   	text-overflow: ellipsis;
 }
 
+@mixin button {
+	border: 0;
+	background-color: $blue-primary;
+	padding: 7px 15px;
+	color: $white;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $hover-blue;
+		color: $hover-yellow;
+	}
+}
+
 // Normalize
 
 body {
@@ -81,6 +94,23 @@ input[type="text"] {
 button:focus {
 	outline: 0;
 }
+
+// Search form 
+
+.searchform-row {
+	display: flex;
+
+	[type="submit"] {
+		@include button;
+	}
+}
+
+.search-label {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+
 
 // Type
 
