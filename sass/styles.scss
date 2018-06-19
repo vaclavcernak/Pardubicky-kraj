@@ -42,6 +42,13 @@ $input-border: #aaaaaa;
 
 }
 
+@mixin row  {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$grid-gutter-width / 2;
+    margin-left: -$grid-gutter-width / 2;
+}
+
 @mixin ellips {
 	overflow: hidden;
     white-space: nowrap;
@@ -106,7 +113,8 @@ button:focus {
 
 // Search form 
 
-.searchform-row {
+.searchform-row,
+.categoryLister {
 	display: flex;
 
 	[type="submit"] {
@@ -166,7 +174,8 @@ button:focus {
 
 // List 
 
-.itmListC {
+.itmListC,
+.itmListMainC {
 	margin-bottom: 15px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid $blue-secondary;
@@ -177,7 +186,8 @@ button:focus {
 	}
 }
 
-.itmListImg {
+.itmListImg,
+.articlePhoto {
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 5px;
@@ -185,6 +195,22 @@ button:focus {
 
 .itmListMore:before {
 	@include arrow;
+}
+
+.itmListDate {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+// Obce 
+
+#cityListC {
+	@include row;
+}
+
+#cityListC .itmListC {
+	@extend .col-sm-6;
+	@extend .col-md-4;
 }
 
 // Type
