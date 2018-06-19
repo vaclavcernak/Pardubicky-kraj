@@ -61,6 +61,15 @@ $input-border: #aaaaaa;
 	}
 }
 
+@mixin arrow {
+	content: "\f105";
+	font-family: "FontAwesome";
+	font-weight: bold;
+	padding-right: 5px;
+	font-size: 1rem;
+	color: $blue-primary;
+}
+
 // Normalize
 
 body {
@@ -110,7 +119,73 @@ button:focus {
 	font-weight: bold;
 }
 
+// Search results 
 
+.SearchResultsC {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid $blue-secondary;
+	
+	h3 {
+		margin-bottom: 10px;
+		font-size: 1rem;
+	}
+}
+
+// Págination 
+
+.pageNumbersC {
+	margin: 15px 0 20px;
+}
+
+.pageNumbersTotal {
+	margin-bottom: 10px;
+}
+
+.pageNumbers {
+	font-size: 1rem;
+	padding: 7px 10px;
+	background-color: $gray;
+
+	a,
+	span {
+		margin-right: 10px;
+	}
+
+	img {
+		position: relative;
+		top: -1px;
+		padding: 5px;
+		background-color: $blue-primary;
+
+		/*&:hover {
+			background-color: $hover-blue;
+		}*/
+	}
+}
+
+// List 
+
+.itmListC {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid $blue-secondary;
+	
+	h3 {
+		margin-bottom: 10px;
+		font-size: 1rem;
+	}
+}
+
+.itmListImg {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+.itmListMore:before {
+	@include arrow;
+}
 
 // Type
 
@@ -301,9 +376,8 @@ ol {
 
 .btn-blue {
 	color: $white !important;
-	padding: 5px 12px;
+	padding: 6px 12px 5px;
 	background-color: $blue-primary;
-	font-size: 0.8rem;
 	display: inline-block;
 
 	&:hover {
@@ -317,6 +391,11 @@ ol {
 		font-family: "FontAwesome";
 		margin-right: 7px;
 	}
+}
+
+.btn-small {
+	font-size: 0.8rem;
+	padding: 5px 12px;
 }
 
 .block-heading-moreLink a {
@@ -686,12 +765,7 @@ input.searchFormT {
 	}
 
 	li:before {
-		    content: "\f105";
-			font-family: "FontAwesome";
-			font-weight: bold;
-		    padding-right: 5px;
-		    font-size: 1rem;
-		    color: $blue-primary;
+		    @include arrow;
 		}
 
 }

@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">	
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
-	<title>Pardubický kraj - HP</title>
+	<title>Pardubický kraj - Úvodní strana</title>
 </head>
 <body>
 	<header>
@@ -135,7 +135,7 @@
 							<div class="block-heading">
 								<h3>NOVINKY z Pardubického kraje</h3>
 								<div class="block-heading-moreLink">
-									<a class="btn-blue" href="">Archiv zpráv</a>
+									<a class="btn-blue btn-small" href="">Archiv zpráv</a>
 								</div>
 							</div> <!-- /.news-heading -->
 
@@ -199,7 +199,7 @@
 					      </div> <!-- /.news-items -->
 
 					      <div class="moreLink-mobile">
-								<a class="btn-blue" href="">Archiv zpráv</a>
+								<a class="btn-blue btn-small" href="">Archiv zpráv</a>
 							</div>
 
 						</div> <!-- /.news -->
@@ -220,6 +220,40 @@
 							</div> <!-- /.news-other-container -->
 
 						</div> <!-- /.news-other -->
+
+						<div class="weather block">
+
+							<div class="weather-info">
+								<h3>Počasí</h3>
+								<div class="weather-info-grades">
+									°C min/max
+								</div>
+							</div>
+
+							<div class="weather-cities">
+								<div id="city1" class="city col-sm">
+									<div class="cityName">Pardubice</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">16/24</div>
+								</div>
+								<div id="city2" class="city col-sm">
+									<div class="cityName">Ústí nad Orlicí</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">14/21</div>
+								</div>
+								<div id="city3" class="city col-sm">
+									<div class="cityName">Svitavy</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">15/21</div>
+								</div>
+								<div id="city4" class="city col-sm">
+									<div class="cityName">Chrudim</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">15/24</div>
+								</div>
+							</div>
+							
+						</div> <!-- /.weather -->
 
 					</div> <!-- /.main-content -->
 				</div>
@@ -254,7 +288,7 @@
 							<div class="block-heading">
 								<h3>Videokanál</h3>
 								<div class="block-heading-moreLink">
-									<a class="btn-blue" href="">Archiv</a>
+									<a class="btn-blue btn-small" href="">Archiv</a>
 								</div>
 							</div> <!-- /.video-channel-heading -->
 							<div class="video-channel-content">
@@ -279,7 +313,31 @@
 								  </div>
 								</div> <!-- /.modal -->
 							</div>
+
+					      <div class="moreLink-tablet-only">
+								<a class="btn-blue btn-small" href="">Archiv</a> <!-- link to videochannel archive -->
+							</div>
+
 						</div> <!-- /.video-channel -->
+
+						<div class="newsletter-signup block">
+							<div class="newsletter-signup-text">
+								<span class="newsletter-signup-text-title">Zasílat novinky na Váš e-mail?</span>
+								<div class="personal-agree">
+									<label for="personalAgree">Souhlasím se zpracováním osobních údajů</label>
+									<input type="checkbox" name="personalAgree" id="personalAgree" class="inputText1">
+								</div>
+							</div>
+							<div class="newsletter-input">
+								<input type="text" name="email" id="email" maxlength="200" placeholder="Zadejte Váš e-mail" class="inputNews">
+							</div>
+							<div class="newsletter-signup-button">
+								<a href="">Přihlásit se k odběru</a>
+							</div>
+							<span class="newsletter-personal-agree-link">
+								<a href="/newsletter-informace-o-zpracovani-osobnich-udaju" target="_new" class="podminky">Podmínky zpracování osobních údajů</a>
+							</span>
+						</div> <!-- /.newsletter -->
 
 					</div> <!-- /.right-panel -->
 				</div>
@@ -287,50 +345,11 @@
 
 			<div class="row">
 				<div class="col-md-9">
-					<div class="weather block">
-
-						<div class="weather-info">
-							<h3>Počasí</h3>
-							<div class="weather-info-grades">
-								°C min/max
-							</div>
-						</div>
-
-						<div class="weather-cities">
-							<div id="city1" class="city col-sm">
-								<div class="cityName">Pardubice</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">16/24</div>
-							</div>
-							<div id="city2" class="city col-sm">
-								<div class="cityName">Ústí nad Orlicí</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">14/21</div>
-							</div>
-							<div id="city3" class="city col-sm">
-								<div class="cityName">Svitavy</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">15/21</div>
-							</div>
-							<div id="city4" class="city col-sm">
-								<div class="cityName">Chrudim</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">15/24</div>
-							</div>
-						</div>
-						
-					</div> <!-- /.weather -->
+					<!-- original weather -->
 				</div>
 
 				<div class="col-md-3">
-					<div class="newsletter-signup block">
-						<div class="newsletter-signup-text">
-							Zasílat novinky na Váš e-mail?
-						</div>
-						<div class="newsletter-signup-button">
-							<a href="">Přihlásit se k odběru</a>
-						</div>
-					</div> <!-- /.newsletter -->
+					<!-- original newsletter -->
 				</div>
 
 			</div> <!-- /.row -->
