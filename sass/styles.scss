@@ -25,7 +25,8 @@ $input-border: #aaaaaa;
 @mixin wider-gutter {
 
 	.container,
-	div[class*="col-"] {
+	div[class*="col-"],
+	.itmPhotogalleryItemC {
 	    padding-right: 15px;
 	    padding-left: 15px;
 	}
@@ -58,7 +59,7 @@ $input-border: #aaaaaa;
 @mixin button {
 	border: 0;
 	background-color: $blue-primary;
-	padding: 7px 15px;
+	padding: 8px 15px;
 	color: $white;
 	cursor: pointer;
 
@@ -93,9 +94,56 @@ a {
 	color: $blue-primary;
 }
 
-// Inputs
 
-input[type="text"] {
+// Type
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-bottom: 1rem;
+}
+
+h1, .h1 {
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 1.5rem;
+}
+
+h2, .h2 {
+	font-size: 1.3rem;
+}
+
+h3, .h3 {
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+h4, .h4 {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+ol {
+	li {
+		margin-bottom: 10px;
+		padding-left: 10px;
+	}
+}
+
+.page-content ul {
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+// Inputs, Selects, Texareas, Labe;position: static;
+
+label {
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
 	border: 1px solid $input-border;
 	background: #fff;
 	padding: 7px 10px;
@@ -107,6 +155,20 @@ input[type="text"] {
 	}
 }
 
+select {
+	padding-left: 6px;
+	padding-right: 20px;
+}
+
+[type="submit"] {
+	@include button;
+}
+
+.submit-label input {
+	margin-top: 26px;
+	width: 100%;
+}
+
 button:focus {
 	outline: 0;
 }
@@ -116,15 +178,17 @@ button:focus {
 .searchform-row,
 .categoryLister {
 	display: flex;
-
-	[type="submit"] {
-		@include button;
-	}
 }
 
 .search-label {
 	font-size: 1rem;
 	font-weight: bold;
+}
+
+.divFormC {
+	input {
+		margin-bottom: 15px;
+	}
 }
 
 // Search results 
@@ -176,8 +240,8 @@ button:focus {
 
 .itmListC,
 .itmListMainC {
-	margin-bottom: 15px;
-	padding-bottom: 15px;
+	margin-bottom: 18px;
+	padding-bottom: 18px;
 	border-bottom: 1px solid $blue-secondary;
 	
 	h3 {
@@ -193,7 +257,15 @@ button:focus {
 	margin-bottom: 5px;
 }
 
-.itmListMore:before {
+.itmList a img {
+	margin-right: 6px;
+    margin-left: 2px;
+    position: relative;
+    top: -2px;
+}
+
+
+.itmListMore::before {
 	@include arrow;
 }
 
@@ -204,8 +276,26 @@ button:focus {
 
 // Obce 
 
+#amapTitle {
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+#mapMap {
+	margin-bottom: 20px;
+}
+
+.mapLocationItem {
+
+	&::before {
+		@include arrow;
+	}
+}
+
 #cityListC {
-	@include row;
+	display: flex;
+    flex-wrap: wrap;
 }
 
 #cityListC .itmListC {
@@ -213,48 +303,29 @@ button:focus {
 	@extend .col-md-4;
 }
 
-// Type
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	margin-bottom: 1rem;
+
+// Fotogalerie
+
+.itmPhotogalleryItemC {
+	@extend .col-sm-4;
+	@extend .col-md-3;
+	margin-bottom: 20px;
 }
 
-h1, .h1 {
-	font-size: 1.7rem;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-top: 5px;
-	margin-bottom: 1.5rem;
-}
+.itmPhotogalleryItem {
+	text-align: center;
+	height: 100%;
+	padding: 10px;
+	border: 1px solid $blue-secondary;
 
-h2, .h2 {
-	font-size: 1.3rem;
-}
-
-h3, .h3 {
-	font-size: 1.1rem;
-	font-weight: bold;
-}
-
-h4, .h4 {
-	font-size: 1rem;
-	font-weight: bold;
-}
-
-ol {
-	li {
-		margin-bottom: 10px;
-		padding-left: 10px;
+	.articlePhoto {
+		float: none;
+		margin: 0 0 10px;
 	}
 }
 
-.page-content ul {
-	li {
-		margin-bottom: 5px;
-	}
-}
-
-// Mobile-first styling
+/**** Mobile-first styling *****/
 
 // Layout
 
@@ -790,7 +861,7 @@ input.searchFormT {
 		}
 	}
 
-	li:before {
+	li::before {
 		    @include arrow;
 		}
 
@@ -921,7 +992,7 @@ input.searchFormT {
 		margin: 0;
 		list-style: none;
 
-		li:before {
+		li::before {
 		    content: "\f105";
 			font-family: "FontAwesome";
 		    padding-right: 5px;
@@ -1216,6 +1287,12 @@ input.searchFormT {
 	text-align: right;
 }
 
+.itmPhotogalleryItemC {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 } // end of media-breakpoint-only(xs
 
 
@@ -1348,6 +1425,20 @@ input.searchFormT {
 .copyright {
 	float: right;
 	text-align: right;
+}
+
+// 
+
+#mapMap {
+	float: right;
+	width: 70%;
+	padding-top: 50px;
+	text-align: center;
+}
+
+#mapLocationC {
+	float: right;
+	width: 30%;
 }
 
 } // end of media-breakpoint-up(sm)
