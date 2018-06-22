@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">	
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
-	<title>Pardubický kraj - Aktuality</title>
+	<title>Pardubický kraj - Rybářské revíry</title>
 </head>
 <body>
 	<header>
@@ -107,84 +107,81 @@
 				</aside> <!-- /.sidebar -->
 
 				<main class="page-content col-lg-9">
-					<h1>Aktuality</h1>
+					<h1>Rybářské revíry</h1>
 
-					<!-- Nutno přidat classu "btn-blue" pro odkaz a vymazat obrazek sipky
-					 -->
-					<div class="headerChapter">
-						<a class="btn-blue" href="" title="Archiv">Archiv</a>
-					</div>
+					<p>Evidence rybářských revírů je aktualizována průběžně po nabytí právní moci rozhodnutí.</p>
 
 
-					<div class="pageNumbersC">
-						<div class="pageNumbers">
-							<span>1-20</span>
-							<a href="">41-60</a>
-							<a href="">61-80</a>
-							<a href="">81-87</a>
-						</div>
-					</div>
+					<div class="divFormC"> 
+						<form action="/rybarske-reviry" method="post">
+							<div class="row">
+								<div class="col-sm-6">
+									<select name="category">
+										<option value="">Zvolte kategorii</option>
+										<option value="911">mimopstruhové revíry</option>
+										<option value="912">pstruhové revíry</option>
+									</select> 
+								</div>
+								<input type="hidden" name="canFiltr" value="ok">
+								<div class="col-sm-6">
+									<select name="ape_203">
+										<option value="">Zvolte - Uživatel revíru</option>
+										<option value="ČRS MO Bystré u Poličky">ČRS MO Bystré u Poličky</option>
+										<option value="ČRS MO Hrochův Týnec, 538 62 Hrochův Týnec">ČRS MO Hrochův Týnec, 538 62 Hrochův Týnec</option>
+										<option value="ČRS MO Chrast u Chrudimi, 17. listopadu 537, 538 51 Chrast u Chrudimi">ČRS MO Chrast u Chrudimi, 17. listopadu 537, 538 51 Chrast u Chrudimi</option>
+										<option value="zrušený">zrušený</option>
+										<option value="ZRUŠENÝ REVÍR rozhodnutím KÚ Pardubického kraje ze dne 12.4.2006, pravomocným 3.6.2006, č.j. 5332-6/2006/OŽPZ/OZE/Fu">ZRUŠENÝ REVÍR rozhodnutím KÚ Pardubického kraje ze dne 12.4.2006, pravomocným 3.6.2006, č.j. 5332-6/2006/OŽPZ/OZE/Fu</option>
+										<option value="ZRUŠENÝ REVÍR rozhodnutím KÚ Pardubického kraje ze dne 18.4.2006, pravomocným 10.6.2006, č.j. 12281-5/2006/OŽPZ/OZE/Fu">ZRUŠENÝ REVÍR rozhodnutím KÚ Pardubického kraje ze dne 18.4.2006, pravomocným 10.6.2006, č.j. 12281-5/2006/OŽPZ/OZE/Fu</option>
+									</select>
+								</div>
+								<div class="col-sm-6">
+									<select name="ape_209">
+										<option value="">Zvolte - Vodní tok</option>
+										<option value="Bylanka">Bylanka</option>
+										<option value="Bysterský potok">Bysterský potok</option>
+										<option value="Desná">Desná</option>
+										<option value="Doubrava">Doubrava</option>
+										<option value="Holetínka">Holetínka</option>
+										<option value="Chrudimka">Chrudimka</option>
+									</select>
+								</div>
+								<div class="col-sm-6 col-md-3 fullwidth-child">
+									<input type="submit" value="Vyhledat zadaný text" name="Vyhledat zadaný text" title="Vyhledat zadaný text" accesskey="4" class="inputSubmit">
+								</div>
+							</div>
+						</form>
+					</div> <!-- /.divFormC -->
 
-					<div class="itmListMainC">
+					<div class="pageNumbersC"><div class="pageNumbers"><span>1-20</span><a href="?tot0=98&amp;pgf0=20">21-40</a><a href="?tot0=98&amp;pgf0=40">41-60</a><a href="?tot0=98&amp;pgf0=60">61-80</a><a href="?tot0=98&amp;pgf0=80">81-98</a></div></div>
 
-					<div class="itmList">
-					<div class="itmListTitle"><h3>
-					<a href="" title="ONLINE: Návštěva vlády České republiky v Pardubickém kraji">ONLINE: Návštěva vlády České republiky v Pardubickém kraji</a>
-					</h3></div>
+					<!-- Nutno přidat classu "heading-only" pro .itmListC divy -->
 
-					<div class="articlePhoto">
-					<a href="https://www.pardubickykraj.cz/data2/dep_39/a_hronovicka__2_of_6_.jpg" title="Návštěva vlády České republiky v Pardubickém kraji"><img src="https://www.pardubickykraj.cz/data2/dep_39/small_a_hronovicka__2_of_6_.jpg" alt="Návštěva vlády České republiky v Pardubickém kraji"></a>
-					</div>
-
-					<div class="itmListDate">18.6.2018</div>
-					<div class="itmListAnnot"><p>Předseda vlády Andrej Babiš a další členové kabinetu tráví dnes den v Pardubickém kraji. Kromě jednání s&nbsp;radními a starosty měst a obcí Pardubického kraje má vláda na programu návštěvu Winternitzových automatických mlýnů, Larischovy vily, nedokončeného obchvatu Chrudimi a Slatiňan a také pardubického přednádraží. </p></div><div class="clearFloat"></div>
-					<div class="itmListMore"><a href="">více informací</a></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/48359/353-001-stribrny-potok-1-a">353 001 Stříbrný potok 1 A</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/47433/451-002-bylanka-1">451 002 Bylanka 1</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/47466/451-014-doubrava-3">451 014 Doubrava 3</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/48004/451-015-doubrava-4">451 015 Doubrava 4</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/48006/451-018-chrudimka-1">451 018 Chrudimka 1</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/48503/451-019-chrudimka-2">451 019 Chrudimka 2</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/48007/451-020-chrudimka-4">451 020 Chrudimka 4</a></h3>
+					</div></div>
+					<div class="itmListC heading-only"><div class="itmList">
+					<h3><a href="/rybarske-reviry/48009/451-021-chrudimka-5-udolni-nadrz-sec">451 021 Chrudimka 5 - údolní nádrž Seč</a></h3>
 					</div></div>
 
-
-					<div class="itmListMainC">
-
-					<div class="itmList">
-					<div class="itmListTitle"><h3>
-					<a href="" title="Ve Svitavách se vařilo podle našich babiček, zdravě a moderně">Ve Svitavách se vařilo podle našich babiček, zdravě a moderně</a>
-					</h3></div>
-
-					<div class="articlePhoto">
-					<a href="https://www.pardubickykraj.cz/data2/dep_39/DSC_0061.JPG" title="Ve Svitavách se vařilo podle našich babiček, zdravě a moderně"><img src="https://www.pardubickykraj.cz/data2/dep_39/small_DSC_0061.JPG" alt="Ve Svitavách se vařilo podle našich babiček, zdravě a moderně"></a>
-					</div>
-
-					<div class="itmListDate">18.6.2018</div>
-					<div class="itmListAnnot"><p>Stále více školních stravovacích zařízení dokáže vařit podle tradičních receptur a přitom zdravě, racionálně, moderně a chutně. Informovat o tom veřejnost hodlá i projekt Pardubického kraje s názvem Kuchyně našich babiček. První akcí se&nbsp;minulý týden&nbsp;stala společná příprava obědového menu pro strávníky školní jídelny ve Střední zdravotnické škole ve Svitavách. Součástí nabídky byla polévka se zeleninou od místního farmáře s vločkami, dále kuřecí nudličky v bylinkovo-sýrové omáčce, pečené brambory se semínky a lívanečky s jahodami a zakysanou smetanou.</p></div><div class="clearFloat"></div>
-					<div class="itmListMore"><a href="">více informací</a></div>
-					</div></div>
-
-					<div class="itmListMainC">
-
-					<div class="itmList">
-					<div class="itmListTitle"><h3>
-					<a href="/" title="Den zdraví návštěvníky oslovil, preventivní vyšetření využilo více lidí než loni">Den zdraví návštěvníky oslovil, preventivní vyšetření využilo více lidí než loni</a>
-					</h3></div>
-
-					<div class="articlePhoto">
-					<a href="https://www.pardubickykraj.cz/data2/dep_39/nl__37_.jpg" title="Radní Ladislav Valtr na Dni Litomyšlské nemocnice"><img src="https://www.pardubickykraj.cz/data2/dep_39/small_nl__37_.jpg" alt="Radní Ladislav Valtr na Dni Litomyšlské nemocnice"></a>
-					</div>
-
-					<div class="itmListDate">15.6.2018</div>
-					<div class="itmListAnnot"><p>Litomyšl - Letošní ročník Dne zdraví v Litomyšlské nemocnici, který se uskutečnil 14. 6. 2018, se těšil velkému zájmu návštěvníků. I přes chladnější počasí, než na jaké jsme v těchto dnech zvyklí, se uskutečnily desítky preventivních vyšetření a prohlídek oddělení i zdravotnické techniky.</p></div><div class="clearFloat"></div>
-					<div class="itmListMore"><a href="">více informací</a></div>
-					</div></div>
-
-
-					<div class="pageNumbersC">
-						<div class="pageNumbers">
-							<span>1-20</span>
-							<a href="">41-60</a>
-							<a href="">61-80</a>
-							<a href="">81-87</a>
-						</div>
-					</div>
-
-
+					<div class="pageNumbersC"><div class="pageNumbers"><span>1-20</span><a href="?tot0=98&amp;pgf0=20">21-40</a><a href="?tot0=98&amp;pgf0=40">41-60</a><a href="?tot0=98&amp;pgf0=60">61-80</a><a href="?tot0=98&amp;pgf0=80">81-98</a></div></div>
 
 
 				</main> <!-- /.page-content -->
