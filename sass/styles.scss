@@ -30,6 +30,7 @@ $table-cell: #F8F9FD;
 	.container,
 	div[class*="col-"],
 	.itmPhotogalleryItemC,
+	.itmVideoC,
 	.orgPersonZC  {
 	    padding-right: 15px;
 	    padding-left: 15px;
@@ -396,6 +397,31 @@ button:focus {
 	.articlePhoto {
 		float: none;
 		margin: 0 0 10px;
+	}
+}
+
+// Videokanál
+
+.itmVideoC {
+	@extend .col-sm-4;
+	@extend .col-md-3;
+	margin-bottom: 20px;
+}
+
+.itmVideo {
+	text-align: center;
+	height: 100%;
+	padding: 10px;
+	border: 1px solid $blue-secondary;
+
+	.articlePhoto {
+		float: none;
+		margin: 0 0 10px;
+	}
+
+	h3 {
+		font-size: 0.9rem;
+		margin-bottom: 5px;
 	}
 }
 
@@ -1415,7 +1441,8 @@ input.searchFormT {
 	text-align: right;
 }
 
-.itmPhotogalleryItemC {
+.itmPhotogalleryItemC,
+.itmVideoC {
 	&:last-child {
 		margin-bottom: 0;
 	}
