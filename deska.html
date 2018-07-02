@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<title>Pardubický kraj - Úřední deska</title>
+</head>
+<body>
+	<header>
+		<div class="container-header">
+			<div class="container container-logo">
+
+				<div class="row">
+					<div class="col-12">
+						<div class="logo"><a href="index.html"><img src="logo-deska.png" alt="logo"></a></div>
+					</div>
+				</div>	
+			</div> <!-- /.container -->
+
+			<div class="top-banner">
+				<img src="images/banner-sample2.jpg" alt="banner">
+			</div>
+
+		</div> <!-- /.container-header -->
+		
+	</header>
+
+	<div class="breadcrumbs-container">
+		<div class="container">
+			<ul class="breadcrumbs">
+				<li><a href="">Portál Pardubického kraje</a></li>
+				<li><a href="">Úřední deska</a></li>
+			</ul>
+		</div> <!-- /.container -->
+	</div> <!-- /.breadcrumbs -->
+
+		<div class="container">
+			<div class="row">
+				<aside class="sidebar col-lg-3">
+					<nav class="sidebar-navigation">
+						<div class="sidebar-menu-heading block-heading">
+							<h3>Menu</h3>
+						</div>
+						<ul class="sidebar-menu">
+							<li><a href="">Rozhodnutí</a></li>
+							<li><a href="">Oznámení</a></li>
+							<li><a href="">Veřejnoprávní smlouvy</a></li>
+							<li><a href="">Výběrová řízení</a></li>
+							<li><a href="">Volná pracovní místa</a></li>
+							<li><a href="">Záměry</a></li>
+							<li><a href="">Dotační programy</a></li>
+							<li><a href="">Smlouvy</a></li>
+							<li><a href="">Trvalé informace</a></li>
+							<li><a href="">Sejmuté dokumenty</a></li>
+						</ul>
+					</nav> <!-- /.sidebar-navigation -->
+				</aside> <!-- /.sidebar -->
+
+				<main class="page-content col-lg-9">
+					<h1>Úřední deska</h1>
+
+					<div id="MainContent_temaHeadingText">
+						<p>Úřední desku Pardubického kraje lze zobrazit jako <a href="">RSS kanál</a>.</p>
+					</div>
+
+					<!-- smazat image tiskárny -->
+					<div id="MainContent_printLink">
+						<a href="" title="tisknout" target="_blank">tisknout</a>
+					</div>
+
+
+					<div id="MainContent_DeskFilterDiv" class="divForm">
+					  <h3><span id="MainContent_FilterTitleLabel">Vyhledávaní v dokumentech</span></h3>
+					  
+					  <!-- přidat .row div pro filter položky a následně .col-x-x pro jednotlivé filter položky-->
+					  <div class="row">
+					  		
+							<!-- přidat spanům, které mají funkci labelu classu "label" -->
+							<div class="col-md-4">
+							  <span class="label" id="MainContent_FilterTextLabel">Hledat text</span>:
+							  <input name="ctl00$MainContent$FilterText" type="text" id="MainContent_FilterText">
+							</div>  
+
+							<div class="col-md-4">
+								<!-- změna popisku labelu a vymazání pomlčky za inputem - zakomentováno -->
+							  <span class="label" id="MainContent_FilterDateFromLabel">Platnost od (m.d.rrrr)</span>:
+							  <input name="ctl00$MainContent$FilterDateFrom" type="text" id="MainContent_FilterDateFrom"><!--&nbsp;-&nbsp; -->
+							</div>  
+
+							<div class="col-md-4">
+								<!-- přidání labelu s popiskem -->
+								<span class="label" id="MainContent_FilterDateFromLabel">Platnost do (m.d.rrrr)</span>:
+							  <input name="ctl00$MainContent$FilterDateTo" type="text" id="MainContent_FilterDateTo">
+							</div>  
+
+							<div class="col-md-4">  
+							  <span class="label" id="MainContent_FilterCategoryLabel">Kategorie dokumentů</span>:
+							  <select name="ctl00$MainContent$FilterCategory" id="MainContent_FilterCategory">
+									<option selected="selected" value=""></option>
+									<option value="826">granty</option>
+									<option value="827">ostatní</option>
+									<option value="822">oznámení</option>
+									<option value="821">rozhodnutí</option>
+								</select>
+							</div>  
+
+							<div class="col-md-4">	
+								<span class="label" id="MainContent_FilterDepartmentLabel">Vystavil (odbor)</span>:
+									<select name="ctl00$MainContent$FilterDepartment" id="MainContent_FilterDepartment">
+									<option selected="selected" value=""></option>
+									<option value="39">Kancelář hejtmana</option>
+									<option value="37">Kancelář ředitele úřadu</option>
+									<option value="46">Odbor dopravy a silničního hospodářství</option>
+									<option value="38">Odbor finanční</option>
+									<option value="47">Odbor kultury, sportu a cestovního ruchu</option>
+								</select>
+							</div>  
+
+							<div class="col-md-4 submit-label">
+								<input type="submit" name="ctl00$MainContent$FilterSubmit" value="vyhledat dokumenty" id="MainContent_FilterSubmit" class="inputSubmit" autopostback="True">
+							</div>	
+
+						</div>	<!-- /.row --> 
+
+					</div> <!-- /.divForm --> 
+
+
+					<div>
+						<table cellspacing="0" cellpadding="4" class="table_desk_withanot" showfooterwhenempty="false" id="MainContent_GridView_desk_withanot" style="">
+							<tbody><tr class="GridView_desk_withanotPager">
+								<td><table>
+									<tbody><tr>
+										<!-- vymazat inline styly (color: Black) u td pageru -->
+										<td><span>1</span></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$2')" style="">2</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$3')" style="">3</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$4')" style="">4</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$5')" style="">5</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$6')" style="">6</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$7')" style="">7</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$8')" style="">8</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$9')" style="">9</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$10')" style="">10</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$11')" style="">...</a></td><td><input type="image" src="images/_ico_nexta.gif" alt="poslední" onclick="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$Last');return false;"></td>
+									</tr>
+								</tbody></table></td>
+							</tr><tr>
+								<td> 
+					                    <span id="MainContent_GridView_desk_withanot_text_field_0"><div class="itmListC"><div class="itmList"><h3>Veřejnoprávní smlouva – Jablonné nad Orlicí – Orličky - RUIAN</h3><div class="itmListAnnot">Veřejnoprávní smlouva uzavřená mezi městem Jablonné nad Orlicí a obcí Orličky upravující zápis údajů do informačního systému územní identifikace adres a nemovitostí podle zákona č. 111/2009 Sb.</div><strong>Číslo dokumentu:</strong> 1890-18<br><strong>Vyvěšeno:</strong> 2.7.2018 - 17.7.2018<br><div class="publicDepartment"><strong>Vystavil: </strong>Odbor organizační a právní a krajský živnostenský úřad</div><a href="https://www.pardubickykraj.cz/viewDocument.asp?document=47227" alt=", Dokument - Veřejnoprávní smlouva – Jablonné nad Orlicí – Orličky - RUIAN"><img src="images/_ico_pdf.gif" alt="Dokument ve formátu PDF"></a><span class="fileSize">(899 KB)</span></div></div></span> 
+					                </td>
+							</tr><tr>
+								<td> 
+					                    <span id="MainContent_GridView_desk_withanot_text_field_1"><div class="itmListC"><div class="itmList"><h3>Instalace nové kotelny o celkovém jmenovitém příkonu 360 kW v provozu společnosti Východočeské plynárenské strojírny, a.s., v obci Rosice u Chrasti</h3><div class="itmListAnnot">Změna povolení provozu zdroje znečišťování ovzduší vydaná v&nbsp;souladu s&nbsp;ustanovením § 13 odst. 2 zákona č. 201/2012 Sb., o ochraně ovzduší, ve znění pozdějších předpisů</div><strong>Číslo dokumentu:</strong> 1889-18<br><strong>Vyvěšeno:</strong> 2.7.2018 - 17.7.2018<br><div class="publicDepartment"><strong>Vystavil: </strong>Odbor životního prostředí a zemědělství</div><a href="https://www.pardubickykraj.cz/viewDocument.asp?document=47226" alt=", Dokument - Instalace nové kotelny o celkovém jmenovitém příkonu 360 kW v provozu společnosti Východočeské plynárenské strojírny, a.s., v obci Rosice u Chrasti"><img src="images/_ico_pdf.gif" alt="Dokument ve formátu PDF"></a><span class="fileSize">(303 KB)</span></div></div></span> 
+					                </td>
+							</tr><tr>
+								<td> 
+					                    <span id="MainContent_GridView_desk_withanot_text_field_2"><div class="itmListC"><div class="itmList"><h3>OKSCR/18/22283, Smlouva  o poskytnutí dotace</h3><div class="itmListAnnot">Obec Ostřešany, Dětské hřiště Ostřešany</div><strong>Číslo dokumentu:</strong> 1888-18<br><strong>Vyvěšeno:</strong> 29.6.2018 - 29.6.2021<br><div class="publicDepartment"><strong>Vystavil: </strong>Odbor kultury, sportu a cestovního ruchu</div><a href="https://www.pardubickykraj.cz/viewDocument.asp?document=47225" alt=", Dokument - OKSCR/18/22283, Smlouva  o poskytnutí dotace"><img src="images/_ico_pdf.gif" alt="Dokument ve formátu PDF"></a><span class="fileSize">(391 KB)</span></div></div></span> 
+					                </td>
+							</tr><tr>
+								<td> 
+					                    <span id="MainContent_GridView_desk_withanot_text_field_3"><div class="itmListC"><div class="itmList"><h3>OKSCR/18/22255, Smlouva o poskytnutí dotace</h3><div class="itmListAnnot">Městys Svojanov, Turistická zóna Za vodou II. etapa</div><strong>Číslo dokumentu:</strong> 1887-18<br><strong>Vyvěšeno:</strong> 29.6.2018 - 29.6.2021<br><div class="publicDepartment"><strong>Vystavil: </strong>Odbor kultury, sportu a cestovního ruchu</div><a href="https://www.pardubickykraj.cz/viewDocument.asp?document=47224" alt=", Dokument - OKSCR/18/22255, Smlouva o poskytnutí dotace"><img src="images/_ico_pdf.gif" alt="Dokument ve formátu PDF"></a><span class="fileSize">(465 KB)</span></div></div></span> 
+					                </td>
+							</tr>
+
+							<tr class="GridView_desk_withanotPager">
+										<td><table>
+											<tbody><tr>
+												<!-- vymazat inline styly (color: Black) u td pageru -->
+										<td><span>1</span></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$2')" style="">2</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$3')" style="">3</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$4')" style="">4</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$5')" style="">5</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$6')" style="">6</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$7')" style="">7</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$8')" style="">8</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$9')" style="">9</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$10')" style="">10</a></td><td><a href="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$11')" style="">...</a></td><td><input type="image" src="images/_ico_nexta.gif" alt="poslední" onclick="javascript:__doPostBack('ctl00$MainContent$GridView_desk_withanot','Page$Last');return false;"></td>
+											</tr>
+										</tbody></table></td>
+									</tr>
+						</tbody></table>
+					</div>
+
+
+
+				</main> <!-- /.page-content -->
+
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 order-sm-1 order-lg-2">
+					<div class="footer-right-menu">
+						<ul class="footer-menu">
+							<li><a href="">Napište nám</a></li>
+							<li><a href="">Prohlášení o přístupnosti</a></li>
+							<li><a href="">Poskytování informací</a></li>
+							<li><a href="">RSS</a></li>
+							<li><a href="">Mapa serveru</a></li>
+						</ul>
+						<ul class="footer-menu footer-menu-languages">
+							<li><a href="">CZ</a></li>
+							<li><a href="">EN</a></li>
+							<li><a href="">DE</a></li>
+							<li><a href="">PL</a></li>
+							<li><a href="">FR</a></li>
+							<li><a href="">RU</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 order-sm-2 order-lg-1">
+					<div class="footer-left-top">
+						<h3>KRAJSKÝ ÚŘAD<br>
+						PARDUBICKÉHO KRAJE</h3>
+						<p>Komenského náměstí 125<br>
+						532 Pardubice</p>
+					</div>
+				</div>
+				
+			</div> <!-- /.row -->
+
+			<div class="row">
+				<div class="col-md-4 col-lg-3">
+					<ul class="footer-list">
+						<li>IČ: 70892822</li>
+						<li>DIČ: CZ70892822</li>
+						<li>www.pardubickykraj.cz</li>
+						<li>deska.pardubickykraj.cz</li>
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-3">
+					<ul class="footer-list">
+						<li>tel.: 466 026 111</li>
+						<li>fax: 466 611 220</li>
+						<li>e-mail: posta@pardubickykraj.cz</li>
+						<li>Datová schránka: z28bwu9</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-md-4 col-lg-6 align-self-end">
+					<div class="copyright">
+						<small>© 2018 Krajský Úřad Pardubického kraje</small>
+					</div>
+				</div>
+
+			</div> <!-- /.row -->
+			
+		</div> <!-- /.container -->
+	</footer>
+
+</body>
+</html>	

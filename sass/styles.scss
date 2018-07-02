@@ -17,6 +17,7 @@ $black: #1d1d1b;
 $gray: #f2f2f2;
 $white: #ffffff;
 $hover-yellow: #ffdf00;
+$hover-yellow-lighten: lighten($hover-yellow, 25%);
 $hover-blue: #003a9e; 
 $input-border: #aaaaaa;
 $red: #ED1C24;
@@ -82,6 +83,12 @@ $table-cell: #F8F9FD;
 	font-size: 1rem;
 	color: $blue-primary;
 }
+
+@mixin font-awesome {
+	font-family: "FontAwesome";
+}
+
+
 
 // Normalize
 
@@ -154,8 +161,10 @@ legend {
 	border-bottom: 1px solid $input-border;
 }
 
-label {
+label,
+.label {
 	margin-bottom: 5px;
+	display: inline-block;
 }
 
 input[type="text"],
@@ -254,7 +263,8 @@ button:focus {
 	font-weight: bold;
 }
 
-.divFormC {
+.divFormC,
+.divForm {
 	input,
 	textarea,
 	select {
@@ -495,7 +505,7 @@ button:focus {
 	cursor: pointer;
 
 	h3::before {
-		font-family: "FontAwesome";
+		@include font-awesome;
 		content: "\f0c9";
 		padding-right: 10px;
 	}
@@ -534,7 +544,8 @@ button:focus {
 		border-top: 2px solid #e3e3e3;
 
 		&:hover {
-			color: $blue-primary;
+			/*color: $blue-primary;*/
+			background-color: $hover-yellow-lighten;
 		}
 
 		&.selectedMenu {
@@ -549,7 +560,8 @@ button:focus {
 		border-right: 1px solid #e3e3e3;
 
 		&:hover {
-			color: $blue-primary;
+			/*color: $blue-primary;*/
+			background-color: $hover-yellow-lighten;
 		}
 
 		&.selectedMenu {
@@ -568,7 +580,10 @@ button:focus {
 		border-right: 1px solid #e3e3e3;
 		font-size: 0.85rem;
 
-		&:hover,
+		&:hover {
+			background-color: $hover-yellow-lighten;
+		}
+
 		&.selectedMenu {
 			background-color: $hover-yellow;
 		}
@@ -632,7 +647,7 @@ button:focus {
 
 	&::before {
 		content: "\f061";
-		font-family: "FontAwesome";
+		@include font-awesome;
 		margin-right: 7px;
 	}
 }
@@ -782,7 +797,7 @@ input.searchFormT {
 
 		&::after {
 			content: "\f105";
-			font-family: "FontAwesome";
+			@include font-awesome;
 			font-weight: bold;
 		    padding-left: 10px;
 		    color: $blue-primary;
@@ -897,7 +912,7 @@ input.searchFormT {
 	}
 
 	&::before {
-		font-family: "FontAwesome";
+		@include font-awesome;
 		font-size: 2rem;
 	}
 }
@@ -956,7 +971,7 @@ input.searchFormT {
 	@extend .bg-gray;
 
 	&:hover {
-		background-color: lighten($hover-yellow, 25%);
+		background-color: $hover-yellow-lighten;
 	}
 
 	a:hover {
@@ -990,28 +1005,37 @@ input.searchFormT {
 }
 
 .arrow-style {
-	padding: 10px;
+	/*padding: 10px;*/
+	padding: 4px 0;
 	margin: 0;
 	list-style: none;
 
 	li {
-		margin: 0 0 5px;
-	    text-indent: -10px;
-	    padding-left: 10px;
+		/*margin: 0 0 5px;*/
+		padding: 4px 10px;
+	  text-indent: -10px;
+	  /*padding-left: 10px;*/
+
+	  &:hover {
+	  	background-color: $hover-yellow-lighten;
+	  }
 
 		a {
+			/*@include ellips;*/
+			display: block;
 			color: inherit;
+			padding-left: 10px;
 
 			&:hover {
-				color: $blue-primary;
+				/*color: $blue-primary;*/
+				text-decoration: none;
+			}
+
+			&::before {
+		    @include arrow;
 			}
 		}
-	}
-
-	li::before {
-		    @include arrow;
-		}
-
+	} 
 }
 
 // Video Channel
@@ -1141,7 +1165,7 @@ input.searchFormT {
 
 		li::before {
 		    content: "\f105";
-			font-family: "FontAwesome";
+			  @include font-awesome;
 		    padding-right: 5px;
 		    font-size: 0.8rem;
 		    position: relative;
@@ -1286,6 +1310,60 @@ input.searchFormT {
 }
 
 
+/***/
+
+#MainContent_printLink {
+	margin-bottom: 20px;
+
+	a::before {
+		@include font-awesome;
+		content: "\f02f";
+		padding-right: 5px;
+	}
+}
+
+// Deska
+
+.container-logo {
+	min-height: 80px;
+}
+
+table.table_desk_withanot {
+	margin-top: 15px;
+
+	td,th {
+		padding: 0;
+	}
+
+	.GridView_desk_withanotPager {
+		font-size: 1rem;
+		background-color: $gray;
+
+		input[type="image"] {
+			position: absolute;
+			margin-top: -10px;
+			padding: 5px;
+			background-color: $blue-primary;
+		}
+
+		td {
+			padding: 5px 10px 5px 5px;
+		}
+	}
+
+	.itmListC {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.itmListAnnot {
+		margin-bottom: 10px;
+	}
+}
+
+
+
+
 
 /*********************/
 /*** MEDIA QUERIES ***/
@@ -1386,8 +1464,6 @@ input.searchFormT {
 	}
 }
 
-
-
 // Weather
 
 .weather-info {
@@ -1448,7 +1524,18 @@ input.searchFormT {
 	}
 }
 
-} // end of media-breakpoint-only(xs
+} // end of media-breakpoint-only(xs)
+
+
+/*** Small devices only (landscape phones, 576px - 770px) ***/
+@include media-breakpoint-only(sm) {
+
+.news-itemC:first-child .news-item-text {
+	min-height: 77px;
+}
+
+} // end of media-breakpoint-only(sm)
+
 
 
 /*** Small devices (landscape phones, 576px and up) ***/
@@ -1473,7 +1560,6 @@ input.searchFormT {
 		    float: left;
 		    list-style: none;
 		    
-
 		    a {
 			    padding-top: 5px;
 			    padding-bottom: 5px;
@@ -1486,7 +1572,7 @@ input.searchFormT {
 
 			    &:hover {
 			    	text-decoration: none;
-			    	background: $hover-yellow;
+			    	background: $hover-yellow-lighten;
 			    }
 		    }
 		}
@@ -1495,6 +1581,10 @@ input.searchFormT {
 		li:last-child a {
 			//padding-right: 0;
 			//border-right: 0;
+		}
+
+		li.selectedNav a {
+			background: $hover-yellow;
 		}
 	}
 }
@@ -1598,6 +1688,20 @@ input.searchFormT {
 
 } // end of media-breakpoint-up(sm)
 
+/***  Medium devices only (tablets, 768px - 992 px) ***/
+@include media-breakpoint-only(md) {
+
+.block-heading h2,
+.block-heading h3,
+.block-heading h4 {
+	font-size: 1rem;
+}
+
+.news-itemC:first-child .news-item-text {
+	min-height: 77px;
+}
+
+} // end of media-breakpoint-only(lg)
 
 
 /*** Medium devices (tablets, 768px and up) ***/
@@ -1723,6 +1827,9 @@ h2, .h2 {
 /*** Large devices (desktops, 992px and up) ***/
 @include media-breakpoint-up(lg) {
 
+.container-logo {
+	min-height: 95px;
+}
 
 // Sidebar
 
@@ -1788,6 +1895,7 @@ h2, .h2 {
 
 .news-itemC:first-child .news-item-text {
 	font-size: 2.2rem;
+	min-height: 116px;
 }
 
 //
@@ -1846,9 +1954,8 @@ h2, .h2 {
 } // end of media-breakpoint-only(md)
 
 
-// Large devices (desktops, 992-1200 px)
+// Large devices only (desktops, 992-1200 px)
 @include media-breakpoint-only(lg) {
-
 
 //
 
