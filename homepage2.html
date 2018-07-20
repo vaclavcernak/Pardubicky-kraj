@@ -20,7 +20,7 @@
 
 				<div class="row">
 					<div class="col-6 col-sm-5 col-md-4">
-						<div class="logo"><a href=""><img src="logo.png" alt="logo"></a></div>
+						<div class="logo"><a href="index.html"><img src="logo.png" alt="logo"></a></div>
 					</div>
 					<div class="col-6 col-sm-7 col-md-8">
 						<div class="top">
@@ -51,7 +51,7 @@
 						    <span><i class="fa fa-bars"></i> Hlavní nabídka</span>
 						</button>
 						<ul>
-							<li><a href="">Úvodní strana</a></li>
+							<li class="selectedNav"><a href="index.html">Úvodní strana</a></li>
 							<li><a href="">Samospráva</a></li>
 							<li><a href="">Krajský úřad</a></li>
 							<li><a href="">Úřední deska</a></li>
@@ -221,6 +221,40 @@
 
 						</div> <!-- /.news-other -->
 
+						<div class="weather block">
+
+							<div class="weather-info">
+								<h3>Počasí</h3>
+								<div class="weather-info-grades">
+									°C min/max
+								</div>
+							</div>
+
+							<div class="weather-cities">
+								<div id="city1" class="city col-sm">
+									<div class="cityName">Pardubice</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">16/24</div>
+								</div>
+								<div id="city2" class="city col-sm">
+									<div class="cityName">Ústí nad Orlicí</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">14/21</div>
+								</div>
+								<div id="city3" class="city col-sm">
+									<div class="cityName">Svitavy</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">15/21</div>
+								</div>
+								<div id="city4" class="city col-sm">
+									<div class="cityName">Chrudim</div>
+									<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
+									<div class="temperature">15/24</div>
+								</div>
+							</div>
+							
+						</div> <!-- /.weather -->
+
 					</div> <!-- /.main-content -->
 				</div>
 
@@ -272,67 +306,41 @@
 								      </button>    
 								        <!-- 16:9 aspect ratio -->
 											<div class="embed-responsive embed-responsive-16by9">
-											  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+											  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always"></iframe>
 											</div>
 								      </div>
 								    </div>
 								  </div>
 								</div> <!-- /.modal -->
 							</div>
+
+					      <div class="moreLink-tablet-only">
+								<a class="btn-blue btn-small" href="">Archiv</a> <!-- link to videochannel archive -->
+							</div>
+
 						</div> <!-- /.video-channel -->
+
+						<div class="newsletter-signup block">
+							<div class="newsletter-signup-text">
+								<span class="newsletter-signup-text-title">Zasílat novinky na Váš e-mail?</span>
+								<div class="personal-agree">
+									<label for="personalAgree">Souhlasím se zpracováním osobních údajů</label>
+									<input type="checkbox" name="personalAgree" id="personalAgree" class="inputText1">
+								</div>
+							</div>
+							<div class="newsletter-input">
+								<input type="text" name="email" id="email" maxlength="200" placeholder="Zadejte Váš e-mail" class="inputNews">
+							</div>
+							<div class="newsletter-signup-button">
+								<a href="">Přihlásit se k odběru</a>
+							</div>
+							<span class="newsletter-personal-agree-link">
+								<a href="/newsletter-informace-o-zpracovani-osobnich-udaju" target="_new" class="podminky">Podmínky zpracování osobních údajů</a>
+							</span>
+						</div> <!-- /.newsletter -->
 
 					</div> <!-- /.right-panel -->
 				</div>
-			</div> <!-- /.row -->
-
-			<div class="row">
-				<div class="col-md-9">
-					<div class="weather block">
-
-						<div class="weather-info">
-							<h3>Počasí</h3>
-							<div class="weather-info-grades">
-								°C min/max
-							</div>
-						</div>
-
-						<div class="weather-cities">
-							<div id="city1" class="city col-sm">
-								<div class="cityName">Pardubice</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">16/24</div>
-							</div>
-							<div id="city2" class="city col-sm">
-								<div class="cityName">Ústí nad Orlicí</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">14/21</div>
-							</div>
-							<div id="city3" class="city col-sm">
-								<div class="cityName">Svitavy</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">15/21</div>
-							</div>
-							<div id="city4" class="city col-sm">
-								<div class="cityName">Chrudim</div>
-								<div class="weatherIcon"><img src="images/ico_8.png" alt="oblačno"></div>
-								<div class="temperature">15/24</div>
-							</div>
-						</div>
-						
-					</div> <!-- /.weather -->
-				</div>
-
-				<div class="col-md-3">
-					<div class="newsletter-signup block">
-						<div class="newsletter-signup-text">
-							Zasílat novinky na Váš e-mail?
-						</div>
-						<div class="newsletter-signup-button">
-							<a href="">Přihlásit se k odběru</a>
-						</div>
-					</div> <!-- /.newsletter -->
-				</div>
-
 			</div> <!-- /.row -->
 
 		</div> <!-- /.container -->
@@ -419,7 +427,7 @@
 						<div class="col-md-3">
 							<div class="bottom-tile">
 								<div class="bottom-tile-heading">
-									<h3><a href="">Krajské dožínky</a></h3>
+									<a href=""><h3>Krajské dožínky</h3></a>
 								</div>
 								<div class="bottom-tile-content">
 									<img src="images/dozinky.jpg" alt="">
@@ -429,7 +437,7 @@
 						<div class="col-md-3">
 							<div class="bottom-tile">
 								<div class="bottom-tile-heading">
-									<h3><a href="">Přijímací řízení na SŠ</a></h3>
+									<a href=""><h3>Přijímací řízení na SŠ</h3></a>
 								</div>
 								<div class="bottom-tile-content">
 									<img src="images/dozinky.jpg" alt="">
@@ -439,7 +447,7 @@
 						<div class="col-md-3">
 							<div class="bottom-tile">
 								<div class="bottom-tile-heading">
-									<h3><a href="">Burza filantropie</a></h3>
+									<a href=""><h3>Burza filantropie</h3></a>
 								</div>
 								<div class="bottom-tile-content">
 									<img src="images/dozinky.jpg" alt="">
@@ -449,7 +457,47 @@
 						<div class="col-md-3">
 							<div class="bottom-tile">
 								<div class="bottom-tile-heading">
-									<h3><a href="">Fresh festival</a></h3>
+									x<a href=""><h3>Fresh festival</h3></a>
+								</div>
+								<div class="bottom-tile-content">
+									<img src="images/dozinky.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="bottom-tile">
+								<div class="bottom-tile-heading">
+									<a href=""><h3>Krajské nemocnice</h3></a>
+								</div>
+								<div class="bottom-tile-content">
+									<img src="images/dozinky.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="bottom-tile">
+								<div class="bottom-tile-heading">
+									<a href=""><h3>Turistický portál</h3></a>
+								</div>
+								<div class="bottom-tile-content">
+									<img src="images/dozinky.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="bottom-tile">
+								<div class="bottom-tile-heading">
+									<a href=""><h3>Školský portál</h3></a>
+								</div>
+								<div class="bottom-tile-content">
+									<img src="images/dozinky.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="bottom-tile">
+								<div class="bottom-tile-heading">
+									<a href=""><h3>Dopravní portál</h3></a>
 								</div>
 								<div class="bottom-tile-content">
 									<img src="images/dozinky.jpg" alt="">
@@ -461,70 +509,22 @@
 				<div class="col-md-3">
 					<div class="bottom-tile">
 						<div class="bottom-tile-heading">
-							<h3><a href="">TAMTAMY Pardubického kraje</a></h3>
+							<a href=""><h3>TAMTAMY Pardubického kraje</h3></a>
 						</div>
 						<div class="bottom-tile-content">
 							<img src="images/tamtamy.jpg" alt="">
 						</div>
 					</div>
-				</div>
-			</div> <!-- /.row -->
-
-			<div class="row">
-				<div class="col-md-9">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="bottom-tile">
-								<div class="bottom-tile-heading">
-									<h3><a href="">Krajské nemocnice</a></h3>
-								</div>
-								<div class="bottom-tile-content">
-									<img src="images/dozinky.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="bottom-tile">
-								<div class="bottom-tile-heading">
-									<h3><a href="">Turistický portál</h3>
-								</div>
-								<div class="bottom-tile-content">
-									<img src="images/dozinky.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="bottom-tile">
-								<div class="bottom-tile-heading">
-									<h3><a href="">Školský portál</a></h3>
-								</div>
-								<div class="bottom-tile-content">
-									<img src="images/dozinky.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="bottom-tile">
-								<div class="bottom-tile-heading">
-									<h3><a href="">Dopravní portál</a></h3>
-								</div>
-								<div class="bottom-tile-content">
-									<img src="images/dozinky.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>	<!-- /.row -->			
-				</div>
-				<div class="col-md-3">
 					<div class="bottom-tile">
 						<div class="bottom-tile-heading">
-							<h3><a href="">Portál muzejních sbírek</a></h3>
+							<a href=""><h3>Portál muzejních sbírek</h3></a>
 						</div>
 						<div class="bottom-tile-content">
 							<img src="images/tamtamy.jpg" alt="">
 						</div>
 					</div>
 				</div>
+					
 			</div> <!-- /.row -->
 
 		</div> <!-- /.container -->
