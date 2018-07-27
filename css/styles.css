@@ -11951,7 +11951,7 @@ table.table_desk_withanot .itmListAnnot {
   }
 
   /* line 1648, ../sass/styles.scss */
-  .bottom-tile-heading h3 {
+  .bottom-tile-heading h3 a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
