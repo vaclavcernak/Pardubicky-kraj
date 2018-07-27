@@ -769,7 +769,7 @@ input.searchFormT {
 	font-size: 1rem;
 	color: $blue-primary;
 	border: 1px solid $blue-primary;
-	background-color: $white;
+	background-color: $hover-yellow;
 	cursor: pointer;
 
 	i {
@@ -1438,7 +1438,7 @@ table.table_desk_withanot {
     		border-top: 2px solid #e3e3e3;
 
 			&:hover {
-				background-color: $white;
+				background-color: $hover-yellow-lighten;
 				text-decoration: none;
 			}
 		}
