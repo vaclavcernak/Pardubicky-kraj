@@ -11778,11 +11778,18 @@ table.table_desk_withanot .itmListAnnot {
   }
 
   /* line 1460, ../sass/styles.scss */
+  .hp-tile::before {
+    text-align: center;
+    width: 18px;
+    display: inline-block;
+  }
+
+  /* line 1468, ../sass/styles.scss */
   .news .block-heading-moreLink {
     display: none;
   }
 
-  /* line 1464, ../sass/styles.scss */
+  /* line 1472, ../sass/styles.scss */
   .moreLink-mobile {
     display: inherit;
     text-align: center;
@@ -11790,43 +11797,43 @@ table.table_desk_withanot .itmListAnnot {
     margin-bottom: 25px;
   }
 
-  /* line 1471, ../sass/styles.scss */
+  /* line 1479, ../sass/styles.scss */
   .carousel-row {
     margin-left: -5px;
     margin-right: -5px;
   }
-  /* line 1475, ../sass/styles.scss */
+  /* line 1483, ../sass/styles.scss */
   .carousel-row div.news-itemC {
     padding-right: 5px;
     padding-left: 5px;
   }
 
-  /* line 1483, ../sass/styles.scss */
+  /* line 1491, ../sass/styles.scss */
   .weather-info {
     background-color: #bfdaec;
     padding: 10px;
     position: relative;
   }
-  /* line 1488, ../sass/styles.scss */
+  /* line 1496, ../sass/styles.scss */
   .weather-info h3 {
     margin: 0;
     color: #1d1d1b;
     font-size: 1rem;
     font-weight: bold;
   }
-  /* line 1494, ../sass/styles.scss */
+  /* line 1502, ../sass/styles.scss */
   .weather-info h3 a {
     color: #1d1d1b;
   }
 
-  /* line 1500, ../sass/styles.scss */
+  /* line 1508, ../sass/styles.scss */
   .weather-info-grades {
     position: absolute;
     top: 10px;
     right: 10px;
   }
 
-  /* line 1506, ../sass/styles.scss */
+  /* line 1514, ../sass/styles.scss */
   .city {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -11834,7 +11841,7 @@ table.table_desk_withanot .itmListAnnot {
     padding: 0 !important;
   }
 
-  /* line 1513, ../sass/styles.scss */
+  /* line 1521, ../sass/styles.scss */
   .cityName,
   .weatherIcon,
   .temperature {
@@ -11848,17 +11855,17 @@ table.table_desk_withanot .itmListAnnot {
     padding-right: 10px;
   }
 
-  /* line 1526, ../sass/styles.scss */
+  /* line 1534, ../sass/styles.scss */
   .weatherIcon {
     text-align: center;
   }
 
-  /* line 1530, ../sass/styles.scss */
+  /* line 1538, ../sass/styles.scss */
   .temperature {
     text-align: right;
   }
 
-  /* line 1536, ../sass/styles.scss */
+  /* line 1544, ../sass/styles.scss */
   .itmPhotogalleryItemC:last-child,
   .itmVideoC:last-child {
     margin-bottom: 0;
@@ -11866,35 +11873,35 @@ table.table_desk_withanot .itmListAnnot {
 }
 /*** Small devices only (landscape phones, 576px - 770px) ***/
 @media (min-width: 576px) and (max-width: 767.98px) {
-  /* line 1547, ../sass/styles.scss */
+  /* line 1555, ../sass/styles.scss */
   .news-itemC:first-child .news-item-text {
     min-height: 77px;
   }
 }
 /*** Small devices (landscape phones, 576px and up) ***/
 @media (min-width: 576px) {
-  /* line 1560, ../sass/styles.scss */
+  /* line 1568, ../sass/styles.scss */
   .nav-toggle {
     display: none;
   }
 
-  /* line 1564, ../sass/styles.scss */
+  /* line 1572, ../sass/styles.scss */
   .top-navigation {
     float: right;
     margin-top: 5px;
   }
-  /* line 1568, ../sass/styles.scss */
+  /* line 1576, ../sass/styles.scss */
   .top-navigation ul {
     display: block !important;
     padding: 0;
     margin: 0;
   }
-  /* line 1573, ../sass/styles.scss */
+  /* line 1581, ../sass/styles.scss */
   .top-navigation ul li {
     float: left;
     list-style: none;
   }
-  /* line 1577, ../sass/styles.scss */
+  /* line 1585, ../sass/styles.scss */
   .top-navigation ul li a {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -11905,75 +11912,75 @@ table.table_desk_withanot .itmListAnnot {
     font-size: 0.8rem;
     font-weight: bold;
   }
-  /* line 1587, ../sass/styles.scss */
+  /* line 1595, ../sass/styles.scss */
   .top-navigation ul li a:hover {
     text-decoration: none;
     background: #ffef80;
   }
-  /* line 1600, ../sass/styles.scss */
+  /* line 1608, ../sass/styles.scss */
   .top-navigation ul li.selectedNav a {
     background: #ffdf00;
   }
 
-  /* line 1608, ../sass/styles.scss */
+  /* line 1616, ../sass/styles.scss */
   .carousel-control-item {
     top: 90px;
   }
-  /* line 1611, ../sass/styles.scss */
+  /* line 1619, ../sass/styles.scss */
   .carousel-control-item::before {
     font-size: 2.5rem;
   }
 
-  /* line 1620, ../sass/styles.scss */
+  /* line 1628, ../sass/styles.scss */
   .weather-info {
     float: left;
     padding: 0 10px 10px;
   }
-  /* line 1624, ../sass/styles.scss */
+  /* line 1632, ../sass/styles.scss */
   .weather-info h3 {
     margin: 0 0 50px;
     color: #1d1d1b;
   }
-  /* line 1628, ../sass/styles.scss */
+  /* line 1636, ../sass/styles.scss */
   .weather-info h3 a {
     color: #1d1d1b;
   }
 
-  /* line 1634, ../sass/styles.scss */
+  /* line 1642, ../sass/styles.scss */
   .weather-cities {
     width: 81%;
     margin: 0 auto;
   }
 
-  /* line 1640, ../sass/styles.scss */
+  /* line 1648, ../sass/styles.scss */
   .city {
     text-align: center;
   }
 
-  /* line 1648, ../sass/styles.scss */
+  /* line 1656, ../sass/styles.scss */
   .bottom-tile-heading h3 a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  /* line 1656, ../sass/styles.scss */
+  /* line 1664, ../sass/styles.scss */
   .footer {
     padding: 2em 0;
   }
 
-  /* line 1660, ../sass/styles.scss */
+  /* line 1668, ../sass/styles.scss */
   .footer-right-menu {
     float: right;
     text-align: right;
   }
 
-  /* line 1665, ../sass/styles.scss */
+  /* line 1673, ../sass/styles.scss */
   .footer-menu {
     float: right;
     clear: right;
   }
-  /* line 1669, ../sass/styles.scss */
+  /* line 1677, ../sass/styles.scss */
   .footer-menu li {
     float: left;
     margin: 0 0 5px 11px;
@@ -11981,20 +11988,20 @@ table.table_desk_withanot .itmListAnnot {
     border-left: 1px solid #ffffff;
     line-height: 1rem;
   }
-  /* line 1676, ../sass/styles.scss */
+  /* line 1684, ../sass/styles.scss */
   .footer-menu li:first-child {
     border: none;
     margin-left: 0;
     padding-left: 0;
   }
 
-  /* line 1684, ../sass/styles.scss */
+  /* line 1692, ../sass/styles.scss */
   .copyright {
     float: right;
     text-align: right;
   }
 
-  /* line 1691, ../sass/styles.scss */
+  /* line 1699, ../sass/styles.scss */
   #mapMap {
     float: right;
     width: 70%;
@@ -12002,7 +12009,7 @@ table.table_desk_withanot .itmListAnnot {
     text-align: center;
   }
 
-  /* line 1698, ../sass/styles.scss */
+  /* line 1706, ../sass/styles.scss */
   #mapLocationC {
     float: right;
     width: 30%;
@@ -12010,32 +12017,32 @@ table.table_desk_withanot .itmListAnnot {
 }
 /***  Medium devices only (tablets, 768px - 992 px) ***/
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* line 1708, ../sass/styles.scss */
+  /* line 1716, ../sass/styles.scss */
   .block-heading h2,
   .block-heading h3,
   .block-heading h4 {
     font-size: 1rem;
   }
 
-  /* line 1714, ../sass/styles.scss */
+  /* line 1722, ../sass/styles.scss */
   .news-itemC:first-child .news-item-text {
     min-height: 77px;
   }
 }
 /*** Medium devices (tablets, 768px and up) ***/
 @media (min-width: 768px) {
-  /* line 1726, ../sass/styles.scss */
+  /* line 1734, ../sass/styles.scss */
   h2, .h2 {
     font-size: 1.4rem;
   }
 
-  /* line 1732, ../sass/styles.scss */
+  /* line 1740, ../sass/styles.scss */
   .top {
     float: right;
     flex-direction: row;
   }
 
-  /* line 1737, ../sass/styles.scss */
+  /* line 1745, ../sass/styles.scss */
   .top-socials {
     margin-top: 3px;
     margin-left: 20px;
@@ -12043,11 +12050,11 @@ table.table_desk_withanot .itmListAnnot {
     order: inherit;
   }
 
-  /* line 1747, ../sass/styles.scss */
+  /* line 1755, ../sass/styles.scss */
   .top-navigation {
     margin-top: -5px;
   }
-  /* line 1752, ../sass/styles.scss */
+  /* line 1760, ../sass/styles.scss */
   .top-navigation ul li a {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -12056,13 +12063,13 @@ table.table_desk_withanot .itmListAnnot {
     font-size: 0.9rem;
   }
 
-  /* line 1764, ../sass/styles.scss */
+  /* line 1772, ../sass/styles.scss */
   .hp-tile {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  /* line 1769, ../sass/styles.scss */
+  /* line 1777, ../sass/styles.scss */
   .hp-tile::before {
     font-size: 2.2rem;
     display: block;
@@ -12074,179 +12081,179 @@ table.table_desk_withanot .itmListAnnot {
     bottom: inherit;
   }
 
-  /* line 1782, ../sass/styles.scss */
+  /* line 1790, ../sass/styles.scss */
   .iframe-placeholder {
     display: block;
   }
 
-  /* line 1788, ../sass/styles.scss */
+  /* line 1796, ../sass/styles.scss */
   .bg-container {
     padding-bottom: 2em;
   }
 
-  /* line 1792, ../sass/styles.scss */
+  /* line 1800, ../sass/styles.scss */
   .middle-block {
     height: 100%;
     background-color: #ffffff;
     margin-bottom: 0;
   }
-  /* line 1797, ../sass/styles.scss */
+  /* line 1805, ../sass/styles.scss */
   .middle-block:hover, .middle-block:hover .middle-content {
     background-color: #ffef80;
   }
-  /* line 1802, ../sass/styles.scss */
+  /* line 1810, ../sass/styles.scss */
   .middle-block:hover .block-heading-dark {
     background-color: #003a9e;
   }
-  /* line 1805, ../sass/styles.scss */
+  /* line 1813, ../sass/styles.scss */
   .middle-block:hover .block-heading-dark * {
     color: #ffdf00;
   }
 
-  /* line 1812, ../sass/styles.scss */
+  /* line 1820, ../sass/styles.scss */
   .middle-heading h3 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  /* line 1819, ../sass/styles.scss */
+  /* line 1827, ../sass/styles.scss */
   .bottom-tile {
     margin-bottom: 1.5em;
   }
 
-  /* line 1827, ../sass/styles.scss */
+  /* line 1835, ../sass/styles.scss */
   .bottom-tile-content {
     display: block;
   }
 
-  /* line 1833, ../sass/styles.scss */
+  /* line 1841, ../sass/styles.scss */
   .footer {
     margin-top: 0.5em;
   }
 }
 /*** Large devices (desktops, 992px and up) ***/
 @media (min-width: 992px) {
-  /* line 1844, ../sass/styles.scss */
+  /* line 1852, ../sass/styles.scss */
   .container-logo {
     min-height: 95px;
   }
 
-  /* line 1850, ../sass/styles.scss */
+  /* line 1858, ../sass/styles.scss */
   .sidebar {
     margin-bottom: 2em;
   }
 
-  /* line 1854, ../sass/styles.scss */
+  /* line 1862, ../sass/styles.scss */
   .sidebar-menu-heading {
     cursor: initial;
   }
-  /* line 1857, ../sass/styles.scss */
+  /* line 1865, ../sass/styles.scss */
   .sidebar-menu-heading h3::before {
     display: none;
   }
 
-  /* line 1862, ../sass/styles.scss */
+  /* line 1870, ../sass/styles.scss */
   .sidebar-menu {
     display: block !important;
   }
 
-  /* line 1868, ../sass/styles.scss */
+  /* line 1876, ../sass/styles.scss */
   .page-content {
     padding-left: 50px;
   }
 
-  /* line 1875, ../sass/styles.scss */
+  /* line 1883, ../sass/styles.scss */
   .top-navigation ul li a {
     font-size: 1rem;
   }
 
-  /* line 1883, ../sass/styles.scss */
+  /* line 1891, ../sass/styles.scss */
   .hp-tiles {
     margin-top: -40px;
     position: relative;
     margin-bottom: 30px;
   }
 
-  /* line 1889, ../sass/styles.scss */
+  /* line 1897, ../sass/styles.scss */
   .hp-tile {
     height: 100%;
     margin-bottom: 0px;
     font-size: 0.8rem;
   }
 
-  /* line 1897, ../sass/styles.scss */
+  /* line 1905, ../sass/styles.scss */
   .carousel-control-item {
     top: 120px;
   }
-  /* line 1900, ../sass/styles.scss */
+  /* line 1908, ../sass/styles.scss */
   .carousel-control-item::before {
     font-size: 3rem;
   }
 
-  /* line 1905, ../sass/styles.scss */
+  /* line 1913, ../sass/styles.scss */
   .news-itemC {
     flex: 0 0 25%;
     max-width: 25%;
   }
 
-  /* line 1910, ../sass/styles.scss */
+  /* line 1918, ../sass/styles.scss */
   .news-itemC:first-child .news-item-text {
     font-size: 2.2rem;
     min-height: 116px;
   }
 
-  /* line 1917, ../sass/styles.scss */
+  /* line 1925, ../sass/styles.scss */
   .weather-cities {
     width: 75%;
   }
 }
 /*** Extra Large devices (desktops, 1200px and up) ***/
 @media (min-width: 1200px) {
-  /* line 1931, ../sass/styles.scss */
+  /* line 1939, ../sass/styles.scss */
   .carousel-control-item {
     top: 135px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* line 1941, ../sass/styles.scss */
+  /* line 1949, ../sass/styles.scss */
   .top-navigation {
     margin-top: 0px;
   }
-  /* line 1944, ../sass/styles.scss */
+  /* line 1952, ../sass/styles.scss */
   .top-navigation ul li {
     font-size: 0.8rem;
   }
 
-  /* line 1949, ../sass/styles.scss */
+  /* line 1957, ../sass/styles.scss */
   .block-heading-moreLink {
     display: none;
   }
 
-  /* line 1953, ../sass/styles.scss */
+  /* line 1961, ../sass/styles.scss */
   .moreLink-tablet-only {
     display: block;
   }
 
-  /* line 1957, ../sass/styles.scss */
+  /* line 1965, ../sass/styles.scss */
   .hejtman-content-right,
   .o-kraji-content-right {
     display: none;
   }
 
-  /* line 1963, ../sass/styles.scss */
+  /* line 1971, ../sass/styles.scss */
   .bottom-tile-heading h3 {
     font-size: .8rem;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* line 1976, ../sass/styles.scss */
+  /* line 1984, ../sass/styles.scss */
   .hejtman-content-right,
   .o-kraji-content-right {
     max-width: 30%;
   }
 
-  /* line 1984, ../sass/styles.scss */
+  /* line 1992, ../sass/styles.scss */
   .bottom-tile-heading h3 {
     font-size: .9rem;
   }

@@ -1455,6 +1455,14 @@ table.table_desk_withanot {
 	}
 }
 
+// HP tiles
+
+.hp-tile::before {
+	text-align: center;
+	width: 18px;
+	display: inline-block;
+}
+
 // HP News 
 
 .news .block-heading-moreLink {
