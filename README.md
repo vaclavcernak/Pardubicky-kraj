@@ -3,4 +3,6 @@ Redesign webu Pardubického kraje - statický model homepage a podstránky v HTM
 
 https://vaclavcernak.github.io/Pardubicky-kraj/
 
+WEB: https://www.pardubickykraj.cz/
+
 #Rok 2018
